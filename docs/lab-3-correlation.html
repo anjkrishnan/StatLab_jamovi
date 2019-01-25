@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Answering questions with data: Lab Manual</title>
+  <meta name="description" content="A lab manual for Psyc 3400">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Answering questions with data: Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A lab manual for Psyc 3400" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Answering questions with data: Lab Manual" />
+  
+  <meta name="twitter:description" content="A lab manual for Psyc 3400" />
+  
+
+<meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lab-2-descriptive-statistics.html">
+<link rel="next" href="lab-4-normal-distribution-central-limit-theorem.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79429674-4');
+</script>
+
+
+<script type="text/javascript">
+mattcrump=1;
+</script>
+
+
+
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Lab Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#important-notes"><i class="fa fa-check"></i><b>0.1</b> Important notes</a><ul>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#cc-by-sa-4.0-license"><i class="fa fa-check"></i><b>0.1.2</b> CC BY-SA 4.0 license</a></li>
+<li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#copying-the-lab-manual"><i class="fa fa-check"></i><b>0.1.3</b> Copying the lab manual</a></li>
+<li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1.4</b> Acknowledgments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a><ul>
+<li class="chapter" data-level="0.2" data-path="software.html"><a href="software.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a><ul>
+<li class="chapter" data-level="0.2.1" data-path="software.html"><a href="software.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
+<li class="chapter" data-level="0.2.2" data-path="software.html"><a href="software.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
+<li class="chapter" data-level="0.2.3" data-path="software.html"><a href="software.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="software.html"><a href="software.html#jamovi"><i class="fa fa-check"></i><b>0.3</b> JAMOVI</a><ul>
+<li class="chapter" data-level="0.3.1" data-path="software.html"><a href="software.html#installing-jamovi"><i class="fa fa-check"></i><b>0.3.1</b> Installing jamovi</a></li>
+<li class="chapter" data-level="0.3.2" data-path="software.html"><a href="software.html#opening-jamovi"><i class="fa fa-check"></i><b>0.3.2</b> Opening jamovi</a></li>
+<li class="chapter" data-level="0.3.3" data-path="software.html"><a href="software.html#adding-modules"><i class="fa fa-check"></i><b>0.3.3</b> Adding modules</a></li>
+<li class="chapter" data-level="0.3.4" data-path="software.html"><a href="software.html#what-you-should-know-for-this-course"><i class="fa fa-check"></i><b>0.3.4</b> What you should know for this course</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a><ul>
+<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#important-info"><i class="fa fa-check"></i><b>1.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi-1"><i class="fa fa-check"></i><b>1.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#loading-and-inspecting-data"><i class="fa fa-check"></i><b>1.2.1</b> Loading and inspecting data</a></li>
+<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#practice"><i class="fa fa-check"></i><b>1.2.2</b> Practice</a></li>
+<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#practice-1"><i class="fa fa-check"></i><b>1.2.3</b> Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#important-info-1"><i class="fa fa-check"></i><b>2.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#jamovi-2"><i class="fa fa-check"></i><b>2.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#descriptive-statistics"><i class="fa fa-check"></i><b>2.2.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.2.2</b> Descriptive Statistics and Histograms</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#practice-problems"><i class="fa fa-check"></i><b>2.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#general-goals-2"><i class="fa fa-check"></i><b>3.1</b> General Goals</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#important-info-2"><i class="fa fa-check"></i><b>3.1.1</b> Important Info</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#jamovi-3"><i class="fa fa-check"></i><b>3.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-coefficient-for-bivariate-data-two-variables"><i class="fa fa-check"></i><b>3.2.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="3.2.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-and-scatterplots"><i class="fa fa-check"></i><b>3.2.2</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#practice-problems-1"><i class="fa fa-check"></i><b>3.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Normal Distribution &amp; Central Limit Theorem</a><ul>
+<li class="chapter" data-level="4.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#general-goals-3"><i class="fa fa-check"></i><b>4.1</b> General Goals</a></li>
+<li class="chapter" data-level="4.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#jamovi-4"><i class="fa fa-check"></i><b>4.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#saving-data-as-standardized-values."><i class="fa fa-check"></i><b>4.2.1</b> Saving data as standardized values.</a></li>
+<li class="chapter" data-level="4.2.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#computing-variables"><i class="fa fa-check"></i><b>4.2.2</b> Computing variables</a></li>
+<li class="chapter" data-level="4.2.3" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#practice-problems-2"><i class="fa fa-check"></i><b>4.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>5</b> Lab 5: Fundamentals of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="5.1" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#jamovi-5"><i class="fa fa-check"></i><b>5.1</b> JAMOVI</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#experiment-background"><i class="fa fa-check"></i><b>5.1.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#calculate-difference-scores-between-pairs-of-measures-and-conduct-a-sign-test"><i class="fa fa-check"></i><b>5.1.2</b> Calculate difference scores between pairs of measures and conduct a sign test</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#entering-data-for-sign-test-problems"><i class="fa fa-check"></i><b>5.1.3</b> Entering data for sign test problems</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#practice-problems-3"><i class="fa fa-check"></i><b>5.1.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html"><i class="fa fa-check"></i><b>6</b> Lab 6: t-Test (one-sample, paired sample)</a><ul>
+<li class="chapter" data-level="6.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants"><i class="fa fa-check"></i><b>6.1</b> Does Music Convey Social Information to Infants?</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#study-description"><i class="fa fa-check"></i><b>6.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#lab-skills-learned"><i class="fa fa-check"></i><b>6.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="6.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#important-stuff"><i class="fa fa-check"></i><b>6.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="6.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#jamovi-6"><i class="fa fa-check"></i><b>6.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test"><i class="fa fa-check"></i><b>6.4.1</b> Baseline phase: Conduct a one sample t-test</a></li>
+<li class="chapter" data-level="6.4.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#test-phase"><i class="fa fa-check"></i><b>6.4.2</b> Test phase</a></li>
+<li class="chapter" data-level="6.4.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#paired-samples-t-test"><i class="fa fa-check"></i><b>6.4.3</b> Paired-samples t-test</a></li>
+<li class="chapter" data-level="6.4.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#practice-problems-4"><i class="fa fa-check"></i><b>6.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html"><i class="fa fa-check"></i><b>7</b> Lab 7: t-test (Independent Sample)</a><ul>
+<li class="chapter" data-level="7.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say"><i class="fa fa-check"></i><b>7.1</b> Do you come across as smarter when people read what you say or hear what you say?</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#study-description-1"><i class="fa fa-check"></i><b>7.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#lab-skills-learned-1"><i class="fa fa-check"></i><b>7.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="7.3" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#important-stuff-1"><i class="fa fa-check"></i><b>7.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="7.4" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#jamovi-7"><i class="fa fa-check"></i><b>7.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>7.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>7.4.2</b> Performing an independent-samples t-test</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#practice-problems-5"><i class="fa fa-check"></i><b>7.4.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 One-way ANOVA</a><ul>
+<li class="chapter" data-level="8.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#how-to-not-think-about-bad-memories-by-playing-tetris"><i class="fa fa-check"></i><b>8.1</b> How to not think about bad memories by playing Tetris</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#study-description-2"><i class="fa fa-check"></i><b>8.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="8.1.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#study-methods"><i class="fa fa-check"></i><b>8.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#lab-skills-learned-2"><i class="fa fa-check"></i><b>8.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="8.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#important-stuff-2"><i class="fa fa-check"></i><b>8.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="8.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#jamovi-8"><i class="fa fa-check"></i><b>8.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#experiment-background-2"><i class="fa fa-check"></i><b>8.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.4.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>8.4.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="8.4.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>8.4.3</b> Unplanned Comparisons: Post-hoc tests</a></li>
+<li class="chapter" data-level="8.4.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9 Repeated Measures ANOVA</a><ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>9.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-description-3"><i class="fa fa-check"></i><b>9.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="9.1.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-methods-1"><i class="fa fa-check"></i><b>9.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#lab-skills-learned-3"><i class="fa fa-check"></i><b>9.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="9.3" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#important-stuff-3"><i class="fa fa-check"></i><b>9.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="9.4" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#jamovi-9"><i class="fa fa-check"></i><b>9.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>9.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.4.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#conduct-a-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>9.4.2</b> Conduct a One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="9.4.3" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#post-hoc-tests"><i class="fa fa-check"></i><b>9.4.3</b> Post-hoc tests</a></li>
+<li class="chapter" data-level="9.4.4" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html"><i class="fa fa-check"></i><b>10</b> Lab 10: Factorial ANOVA</a><ul>
+<li class="chapter" data-level="10.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#does-standing-up-make-you-focus-more"><i class="fa fa-check"></i><b>10.1</b> Does standing up make you focus more?</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#study-description-4"><i class="fa fa-check"></i><b>10.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="10.1.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#study-methods-2"><i class="fa fa-check"></i><b>10.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#lab-skills-learned-4"><i class="fa fa-check"></i><b>10.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="10.3" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#important-stuff-4"><i class="fa fa-check"></i><b>10.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="10.4" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#jamovi-10"><i class="fa fa-check"></i><b>10.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>10.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.4.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.4.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.4.3" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.4.3</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.4.4" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#practice-problems-8"><i class="fa fa-check"></i><b>10.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html"><i class="fa fa-check"></i><b>11</b> Lab 11: Mixed Factorial ANOVA</a><ul>
+<li class="chapter" data-level="11.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#do-you-remember-things-better-when-you-take-pictures-of-them"><i class="fa fa-check"></i><b>11.1</b> Do you remember things better when you take pictures of them?</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#study-description-5"><i class="fa fa-check"></i><b>11.1.1</b> Study description</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#lab-skills-learned-5"><i class="fa fa-check"></i><b>11.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="11.3" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#important-stuff-5"><i class="fa fa-check"></i><b>11.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="11.4" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#jamovi-11"><i class="fa fa-check"></i><b>11.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>11.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="11.4.2" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.4.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="11.4.3" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#practice-problems-9"><i class="fa fa-check"></i><b>11.4.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Answering questions with data: Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<img src="LabmanualCover.png" id="coverpic" width="350" style="display: block; margin: auto;" />
+<div id="lab-3-correlation" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Lab 3: Correlation</h1>
+<script>
+$("#coverpic").hide();
+</script>
+<p><span class="newthought"> If … we choose a group of social phenomena with no antecedent knowledge of the causation or absence of causation among them, then the calculation of correlation coefficients, total or partial, will not advance us a step toward evaluating the importance of the causes at work. —Sir Ronald Fisher </span></p>
+<p>In lecture and in the textbook, we have been discussing the idea of correlation. This is the idea that two things that we measure can be somehow related to one another. For example, your personal happiness, which we could try to measure say with a questionnaire, might be related to other things in your life that we could also measure, such as number of close friends, yearly salary, how much chocolate you have in your bedroom, or how many times you have said the word Nintendo in your life. Some of the relationships that we can measure are meaningful, and might reflect a causal relationship where one thing causes a change in another thing. Some of the relationships are spurious, and do not reflect a causal relationship.</p>
+<p>In this lab you will learn how to compute correlations between two variables in software, and then ask some questions about the correlations that you observe.</p>
+<div id="general-goals-2" class="section level2">
+<h2><span class="header-section-number">3.1</span> General Goals</h2>
+<ol style="list-style-type: decimal">
+<li>Compute Pearson’s r between two variables using software</li>
+<li>Discuss the possible meaning of correlations that you observe</li>
+</ol>
+<div id="important-info-2" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Important Info</h3>
+<p>We use data from the <a href="http://worldhappiness.report">World Happiness Report</a>. A .csv of the data can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/WHR2018.csv" download>WHR2018.csv</a></p>
+</div>
+</div>
+<div id="jamovi-3" class="section level2">
+<h2><span class="header-section-number">3.2</span> JAMOVI</h2>
+<p>In this lab, we will use jamovi to calculate the correlation coefficient. We will focus on the most-commonly used Pearson’s coefficient, r. We will learn how to:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Produce a correlation matrix</li>
+<li>Produce a scatterplot</li>
+</ol>
+<p>Let’s first begin with a short data set we will enter into a new jamovi data spreadsheet. Remember, in order to calculate a correlation, you need to have bivariate data; that is, you must have at least two variables, x and y. You can also have more than two variables, as indicated in the section that follows.</p>
+<div id="correlation-coefficient-for-bivariate-data-two-variables" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Correlation Coefficient for Bivariate Data: Two Variables</h3>
+<p>Let’s use the following data set: {x= 1, 3, 2, 5, 4, 6, 5, 8, 9} {y= 6, 5, 8, 7, 9, 7, 8, 10, 13}. Notice there are two variables, <code>x</code> and <code>y</code>. Enter these into jamovi and name them appropriately. With your data file open, go up to the top menu and follow these steps:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BwfCAIix-JM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+<p>On the right, jamovi will produce an output table containing the correlation matrix requested. Any variable correlated with itself will result in an r of 1. The Pearson r correlation between variables x and y is 0.765.</p>
+<p>In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you can enter multiple variables into the correlation window and obtain a correlation matrix–a table showing every possible bivariate correlation amongst a group of variables. To illustrate how this is done, let’s add a new variable to our existing spreadsheet: variable <code>z</code>, {z= 1, 4, 2, 9, 5, 7, 12, 5, 3}. Follow these steps to obtain the correlation matrix:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ULTNeFUCqHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>According to this output: 1. The correlation coefficient between variables <code>x</code> and <code>y</code> is .765 2. The correlation coefficient between variables <code>x</code> and <code>z</code> is .294 3. The correlation coefficient between variables <code>y</code> and <code>z</code> is -.080</p>
+</div>
+<div id="correlation-and-scatterplots" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Correlation and Scatterplots</h3>
+<p>To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let’s use data from The World Happiness Report <a href="http://worldhappiness.report">World Happiness Report</a>. A .csv of the data can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/WHR2018.csv" download>WHR2018.csv</a></p>
+<p>Using this data, let’s answer the following question: does a country’s measure for <code>freedom to make life choices</code> correlate with that country’s measure for <code>Confidence in national government</code>? Let’s find the correlation coefficient between these variables first. With your data file open, go up to the top menu and follow these steps to get the correlation matrix and scatter plot. You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best-fitting line as it minimizes the distance from it to all the data. To add the line, just check the option under ‘Regression Line’ for ‘Linear’.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4tmu4b2q-Es" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>Based on this output, the correlation between <code>Freedom to make life choices</code> and <code>Confidence in national government</code> is .408.</p>
+<p>This scatterplot is very important. The distance between the line and the data points is indicative of the strength of the correlation coefficient; they are directly related. For example, if the data were more clustered or tighter to the line, the correlation would be stronger. If the data points are more spread out and far from the line, the correlation is weaker.</p>
+</div>
+<div id="practice-problems-1" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Practice Problems</h3>
+<ol style="list-style-type: decimal">
+<li><p>Find the correlation between “perceptions of corruption” and “positive affect”. Create a scatterplot to visualize this relationship. What are your conclusions about the relationship between affect and perceived corruption? Is this surprising to you?</p></li>
+<li><p>What has happened to log GDP (consider this a measure of GDP) in the United States ONLY with time (as the year has increased)? Explain this relationship and provide a scatterplot.</p></li>
+<li><p>Which country (or countries) have seen a more consistent and strong increase in log GDP over time? Which country (or countries) have seen a decrease over time?</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-2-descriptive-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-4-normal-distribution-central-limit-theorem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/CrumpLab/statisticsLab/blob/master/03-Correlation.Rmd",
+"text": "Edit"
+},
+"download": ["Statistics_Lab.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

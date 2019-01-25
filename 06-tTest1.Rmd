@@ -1,0 +1,111 @@
+# Lab 6: t-Test (one-sample, paired sample)
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+Any experiment may be regarded as forming an individual of a 'population' of experiments which might be performed under the same conditions. A series of experiments is a sample drawn from this population.
+---William Sealy Gossett
+</span>
+
+
+<div class="marginnote">
+This lab is modified and extended from [Open Stats Labs](https://sites.trinity.edu/osl). Thanks to Open Stats Labs (Dr. Kevin P. McIntyre) for their fantastic work.
+</div>
+
+## Does Music Convey Social Information to Infants?
+
+This lab activity uses the open data from Experiment 1 of Mehr, Song, and Spelke (2016) to teach one-sample and paired samples t-tests. Results of the activity provided below should exactly reproduce the results described in the paper.
+
+### STUDY DESCRIPTION
+
+Parents often sing to their children and, even as infants, children listen to and look at their parents while they are singing. Research by Mehr, Song, and Spelke (2016) sought to explore the psychological function that music has for parents and infants, by examining the hypothesis that particular melodies convey important social information to infants. Specifically, melodies convey information about social affiliation.
+
+The authors argue that melodies are shared within social groups. Whereas children growing up in one culture may be exposed to certain songs as infants (e.g., “Rock-a-bye Baby”), children growing up in other cultures (or even other groups within a culture) may be exposed to different songs.Thus, when a novel person (someone who the infant has never seen before) sings a familiar song, it may signal to the infant that this new person is a member of their social group.
+
+To test this hypothesis, the researchers recruited 32 infants and their parents to complete an experiment.During their first visit to the lab, the parents were taught a new lullaby (one that neither they nor their infants had heard before).The experimenters asked the parents to sing the new lullaby to their child every day for the next 1-2 weeks.
+
+Following this 1-2 week exposure period, the parents and their infant returned to the lab to complete the experimental portion of the study.Infants were first shown a screen with side-by-side videos of two unfamiliar people, each of whom were silently smiling and looking at the infant.The researchers recorded the looking behavior (or gaze) of the infants during this ‘baseline’ phase. Next, one by one, the two unfamiliar people on the screen sang either the lullaby that the parents learned or a different lullaby (that had the same lyrics and rhythm, but a different melody).Finally, the infants saw the same silent video used at baseline, and the researchers again recorded the looking behavior of the infants during this ‘test’ phase.For more details on the experiment’s methods, please refer to Mehr et al. (2016) Experiment 1.
+
+## Lab skills learned
+
+1. Conducting a one-sample t-test
+2. Conducting a paired-sample t-test
+3. Discussing inferences and limitations
+
+## Important Stuff
+- citation: Mehr, S. A., Song. L. A., & Spelke, E. S. (2016). For 5-month-old infants, melodies are social. Psychological Science, 27, 486-501.
+- [Link to .pdf of article](http://journals.sagepub.com/stoken/default+domain/d5HcBHg85XamSXGdYqYN/full)
+- <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/MehrSongSpelke2016.csv" download>Data in .csv format</a>
+- [Data in SPSS format](https://drive.google.com/open?id=0Bz-rhZ21ShvOa3c4X3hqOWxwcUU)
+
+## JAMOVI
+
+In this lab, we will use jamovi to:
+
+1. Perform a one-sample t-test
+2. Perform a paired-samples t-test
+
+First, download the .csv formatted data file, using the link above, or just click [here](https://drive.google.com/open?id=0Bz-rhZ21ShvOdW1wV0pmUTJSSk0). The data contains all of the measurements from all five experiments in the paper. We are only going to analyze the data from experiment 1 in this example (feel free to try out analyses on the other experiments for practice). 
+
+### Baseline phase: Conduct a one sample t-test
+
+You first want to show that infants' looking behavior did not differ from chance during the baseline trial. The baseline trial was 16 seconds long. During the baseline, infants watched a video of two unfamilar people, one on the left and one on the right. There was no sound during the basline. Both of the actors in the video smiled directly at the infant. The important question was to determine whether the infant looked more or less to either person. If they showed no preference, the infant should look at both people about 50% of the time. 
+
+In Experiment 1, values in the `Baseline_Proportion_Gaze_to_Singer` variable show the proportion of time that the infant looked to the person who would later sing the familiar song to them. If the average of these proportion is 0.5 (i.e., 50%) across the infants, then we would have some evidence that the infants were not biased at the beginning of the experiment. However, if the infants on average had a bias toward the singer, then the average proportion of the looking time should be different than 0.5.
+
+Using a one-sample t-test, we can test the hypothesis that our sample mean for the `Baseline` was not different from 0.5. To do this in jamovi, follow these steps, and you will see the rght side of the screen update with the chosen analyses and statistics:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RW6eu5BkfYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Question 1:** What option would you choose if you decided to perform a one-tailed t-test?
+</div>
+**Question 2:** Why was the baseline condition important for the experiment? What does performance in this condition tell us?
+</div>
+
+Using the APA guidelines, we would report the results of the one-sample t-test as:
+
+> During the baseline condition, the mean proportion looking time toward the singer was 0.52, and was not significantly different from 0.5, according to a one-sample test, t(31) = 0.674, p = 0.505.
+
+You should take the time to check this result, and see if it is the same one that was reported in the paper.
+
+### Test phase
+
+Remember how the experiment went. Infants watched silent video recordings of two women (Baseline). Then each person sung a song, one was familiar to the infant (their parents sung the song to them many times), and one was unfamiliar (singing phase). After the singing phase, the infants watched the silent video of the two singers argain (test phase). The critical question was whether the infants would look more to the person who sung the familiar song compared to the person who sun the unfamiliar song. If the infants did this, they should look more than 50% of the time to the singer who sang the familiar song.
+
+**Test Yourself:** Perform a one-sample t-test for the `Test_Proportion_Gaze_to_Singer` condition by following the steps outlined above. Hint: The only thing you need to change is which variable you include for the test. Make sure you know how to report the result in APA format.
+
+<div class="marginnote">
+**Question:** Why was the test condition important for the experiment? What does performance in this condition tell us?
+</div>
+
+### Paired-samples t-test
+
+The paired samples t-test is easy to do. We've already made two variables called `Baseline_Proportion_Gaze_to_Singer`, and `Test_Proportion_Gaze_to_Singer`. These contain each of the infants looking time proportions to the singer for both parts of the experiment. We can see if the difference between them was likely or unlikely due to chance by running a paired samples t-test. To do this in jamovi, follow these steps, and you will see the rght side of the screen update with the chosen analyses and statistics:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-oZlzRlrepQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Relationship between one-sample and paired sample t-test
+
+<div class="marginnote">
+**Question:** Why is it that a paired samples t-test can be the same as the one sample t-test? What do you have to do the data in the paired samples t-test in order to conduct a one-sample t-test that would give you the same result?
+</div>
+
+The one-sample test whether a sample mean is different from some particular mean. The paired sample t-test, is to determine whether one sample mean is different from another sample mean. If you take the scores for each variable in a paired samples t-test, and subtract them from one another, then you have one list of difference scores. Then, you could use a one sample t-test to test whether these difference scores are different from 0. It turns out you get the same answer from a paired sample t-test testing the difference between two sample means, and the one sample t-test testing whether the mean difference of the difference scores between the samples are different from 0. 
+
+<div class="marginnote">
+**Test Yourself:** Conduct the same analysis in jamovi using difference scores. What test would you choose?
+</div>
+
+#### Usefulness of difference scores
+
+Let's use the difference scores to one more useful thing. Sometime the results of a t-test aren't intuitively obvious. By the t-test we found out that a small difference between the test phase and baseline was not likely produced by chance. How does this relate to the research question about infants using familiar songs as cues for being social? Let's ask a very simple question. How many infants actually showed the bias? How many infants out of 32 looked longer at the singer who sang the familiar song during test, compared to during baseline.
+
+Here, 22 out of 32 infants showed the effect. To put that in terms of probability, 68.75% of infants showed the effect. These odds and percentages give us another way to appreciate how strong the effect is. It wasn't strong enough for all infants to show it.
+
+### Practice Problems
+
+1. Use the data file from this lab tutorial to test whether the number of frames the baby spent gazing at the familiar song is significantly different than the number of frames spent gazing at the unfamiliar song (use alpha = .05). Report your results in proper statistical reporting format.
+
+2. Compute a new variable representing the difference in number of frames the baby spent gazing between the familiar and unfamiliar song conditions. Test this difference score against a mean of 0 (use alpha=.05). Report your results in proper statistical reporting format.

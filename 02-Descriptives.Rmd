@@ -1,0 +1,60 @@
+# Lab 2: Descriptive Statistics
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+Describing comic sensibility is near impossible. It's sort of an abstract silliness, that sometimes the joke isn't the star.
+---Dana Carvey
+</span>
+
+The purpose of this lab is to show you how to compute basic descriptive statistics, including measures of central tendency (mean, mode, median) and variation (range, variance, standard deviation). 
+
+## General Goals
+
+1. Compute measures of central tendency using software
+2. Compute measures of variation using software
+3. Ask some questions of a data set using descriptive statistics
+
+### Important info
+
+We will be using data from the gapminder project. You can download a small snippet of the data in .csv format from this link (note this dataset was copied from the gapminder library for R) <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/gapminder.csv" download>gapminder.csv</a>
+
+## JAMOVI
+
+In this lab, we will use jamovi to calculate a variety of descriptive statistics. jamovi allows us to specify which statistics we would like calculated and produce them all in one output table. Here, we will learn to:
+
+1. Calculate descriptive statistics
+2. Graph data using a histogram
+
+Let's begin with a short data set {x= 1, 1, 4, 1, 2, 5, 7}
+
+Suppose we want to calculate the measures of central tendency (mean, median, and mode) as well as variability (range, standard deviation, and variance). First, we will have to enter our data into the jamovi spreadsheet. There are 7 measurements, so we will need 7 rows of dat, see below on how to enter data into jamovi.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GPVdnrlSSbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Descriptive Statistics
+
+From here, go to the top menu and choose 'Exploration', and a new window will ask you to specify for which variables you want descriptives statistics calculated. Check the ones you want to see, and you will find them displayed on the right.
+
+### Descriptive Statistics and Histograms
+
+Now let's use a real dataset to calculate the same measures of central tendency and variability as in the last example, but with the addition of a histogram to visualize a distribution to relate back to the descriptive statistics.
+
+Here is a link to the life expectancy dataset we used for our graphing tutorial.  href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/gapminder.csv" download>gapminder.csv</a> 
+
+Suppose we wanted to know about life expectancy (around the world) in the year 1952. This will include calculating descriptive statistics, as well as graphing a histogram to examine the distribution of our data. First, we have to filter the data to only include the rows relevant to the year 1952. As with our previous example, we will then click the 'Exploration' button next, and choose our measures of central tendency (mean, median, mode) as well as variability (range, standard deviation, variance). We will also check the box for histogram in the 'Plots' section. Then, jamovi will produce a table of the requested descriptive statistics and a histogram showing the distribution of life expectancy (in years). See the steps below to get the descriptives and histogram:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HQ982emtcjU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Something to think about: What do the mean, median, and mode indicate about the shape of the distribution? Is it confirmed when we look at the histogram? How does the shape of this distribution compare to the symmetrical normal distribution which is superimposed over it? 
+
+### Practice Problems
+
+1. Using the life expectancy data set, produce a table of output showing the descriptive statistics (measures of central tendency and variability) for the year 2007. 
+
+2. Advanced: Plot histograms of life expectancy for the year 1952 and 2007 on the same scale. How are these distributions different? .
+
+
+

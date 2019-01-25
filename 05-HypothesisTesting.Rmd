@@ -1,0 +1,55 @@
+# Lab 5: Fundamentals of Hypothesis Testing
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+The null hypothesis is never proved or established, but is possibly disproved, in the course of experimentation. Every experiment may be said to exist only to give the facts a chance of disproving the null hypothesis.
+---R. A. Fisher
+</span>
+
+## JAMOVI
+
+In this lab, we will use jamovi to:
+
+1. Calculate difference scores between pairs of measures
+2. Conduct a sign test
+
+### Experiment Background
+
+This is a fictitious experiment based on the infamous Coke vs. Pepsi Taste Test Challenge. 20 blindfolded participants were presented with two cups of soda (Coke and Pepsi). Presentation sequence was randomly determined, and participants were required to rate the taste of the soda on a scale from 1-5. 
+
+### Calculate difference scores between pairs of measures and conduct a sign test
+
+First, let's open the relevant data file; [Here](https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/PepsiCoke.sav) is the link; it is called PepsiCoke.sav. We need to calculate, for each participant, the difference between the rating they gave for Coke vs. Pepsi. We will use jamovi to create a new variable (in a new column) containing only difference scores. We will then re-assign the difference scores to indicate preference for Pepsi or Coke. Since we used the calculation "Pepsi - Coke"", anyone who has a positive difference score preferred the Pepsi better, while anyone with a negative difference score preferred the Coke.
+
+Our goal here is not simply to calculate difference scores. We really want to know if there were more instances of preference for one soda over the other. Since the sign tells us who liked Pepsi better or who liked Coke better, comparing the number of pluses to minuses will tell us which soda wins out (and is also the reason this test is called a Sign test). Follow the steps below to accomplish all of this:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wJkIzaf2pQ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+So, looking at this table, it's clear that more people preferred Coke (there are 16 positive differences), and much fewer people preferred Pepsi (there are only 4 negative differences). The question is, is this difference (16 vs. 4) large enough to be statistically significant. The table labeled "Test Statistics" answers this question.
+
+The binomial distribution is used to obtain a p-value for this exact outcome. The p-value listed in the table is .012. Since this number is less than the commonly used alpha level (.05), we can say that this difference is indeed significant. People significantly prefer Coke over Pepsi in the Taste Test Challenge.
+
+(Neither this lab manual nor any of its authors are affiliated with, funded, or in any way associated with the Coca Cola Company)
+
+### Entering data for sign test problems
+
+What if you aren't given a set of paired scores? What if your professor asks you to perform a sign test on a single outcome statement? For example: Test the hypothesis that a coin is weighted if, out of 15 flips of the coin, it lands on tails 13 times. 
+
+Notice that in this problem, there are no pairs of scores. We're essentially only given the number of signs: out of 15 flips, the coin landed on tails 13 times (you can think of this as 13 pluses) and on heads obviously twice (you can think of this as 2 minuses). 
+
+Since jamovi needs counts conduct the sign test, you can simply create one column called 'Con Flip', and treat each row as a flip. Since you know that 13 of the flips were tails, type `Tails` in 13 rows and `Heads` in 2 rows (total of 15 flips).From here, you can conduct a sign test as described above.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GA4K-Yvl0xQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Practice Problems
+
+1. In this lab, you will be conducting a sign test to determine whether a coin is weighted. Individually or in small groups, take a coin out of your pocket. If working in groups, use only one coin for the whole group. Now, flip the coin 25 times. Write down how many heads and tails you observed. 
+
+2. Enter this into your jamoi spreadsheet and run a sign test using an alpha level of .05. What is your result? 
+
+3. Have students in the class (or groups) announce their results as well. Did anyone have a trick coin? Do you think some of the coins used were actually weighted? Why or why not?
+
+

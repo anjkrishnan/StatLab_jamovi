@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Answering questions with data: Lab Manual</title>
+  <meta name="description" content="A lab manual for Psyc 3400">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Answering questions with data: Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A lab manual for Psyc 3400" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Answering questions with data: Lab Manual" />
+  
+  <meta name="twitter:description" content="A lab manual for Psyc 3400" />
+  
+
+<meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lab-3-correlation-1.html">
+<link rel="next" href="lab-5-fundamentals-of-hypothesis-testing-1.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79429674-4');
+</script>
+
+
+<script type="text/javascript">
+mattcrump=1;
+</script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Lab Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#important-notes"><i class="fa fa-check"></i><b>0.1</b> Important notes</a><ul>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#cc-by-sa-4.0-license"><i class="fa fa-check"></i><b>0.1.2</b> CC BY-SA 4.0 license</a></li>
+<li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#copying-the-lab-manual"><i class="fa fa-check"></i><b>0.1.3</b> Copying the lab manual</a></li>
+<li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1.4</b> Acknowledgments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a><ul>
+<li class="chapter" data-level="0.2" data-path="software.html"><a href="software.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a><ul>
+<li class="chapter" data-level="0.2.1" data-path="software.html"><a href="software.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
+<li class="chapter" data-level="0.2.2" data-path="software.html"><a href="software.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
+<li class="chapter" data-level="0.2.3" data-path="software.html"><a href="software.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="software.html"><a href="software.html#jamovi"><i class="fa fa-check"></i><b>0.3</b> JAMOVI</a><ul>
+<li class="chapter" data-level="0.3.1" data-path="software.html"><a href="software.html#installing-jamovi"><i class="fa fa-check"></i><b>0.3.1</b> Installing jamovi</a></li>
+<li class="chapter" data-level="0.3.2" data-path="software.html"><a href="software.html#opening-jamovi"><i class="fa fa-check"></i><b>0.3.2</b> Opening jamovi</a></li>
+<li class="chapter" data-level="0.3.3" data-path="software.html"><a href="software.html#adding-modules"><i class="fa fa-check"></i><b>0.3.3</b> Adding modules</a></li>
+<li class="chapter" data-level="0.3.4" data-path="software.html"><a href="software.html#what-you-should-know-for-this-course"><i class="fa fa-check"></i><b>0.3.4</b> What you should know for this course</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a><ul>
+<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#important-info"><i class="fa fa-check"></i><b>1.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi-1"><i class="fa fa-check"></i><b>1.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#loading-and-inspecting-data"><i class="fa fa-check"></i><b>1.2.1</b> Loading and inspecting data</a></li>
+<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#practice"><i class="fa fa-check"></i><b>1.2.2</b> Practice</a></li>
+<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#practice-1"><i class="fa fa-check"></i><b>1.2.3</b> Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#important-info-1"><i class="fa fa-check"></i><b>2.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#jamovi-2"><i class="fa fa-check"></i><b>2.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#descriptive-statistics"><i class="fa fa-check"></i><b>2.2.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.2.2</b> Descriptive Statistics and Histograms</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#practice-problems"><i class="fa fa-check"></i><b>2.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#general-goals-2"><i class="fa fa-check"></i><b>3.1</b> General Goals</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#important-info-2"><i class="fa fa-check"></i><b>3.1.1</b> Important Info</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#jamovi-3"><i class="fa fa-check"></i><b>3.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-coefficient-for-bivariate-data-two-variables"><i class="fa fa-check"></i><b>3.2.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="3.2.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-and-scatterplots"><i class="fa fa-check"></i><b>3.2.2</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#practice-problems-1"><i class="fa fa-check"></i><b>3.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Normal Distribution &amp; Central Limit Theorem</a><ul>
+<li class="chapter" data-level="4.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#general-goals-3"><i class="fa fa-check"></i><b>4.1</b> General Goals</a></li>
+<li class="chapter" data-level="4.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#jamovi-4"><i class="fa fa-check"></i><b>4.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#saving-data-as-standardized-values."><i class="fa fa-check"></i><b>4.2.1</b> Saving data as standardized values.</a></li>
+<li class="chapter" data-level="4.2.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#computing-variables"><i class="fa fa-check"></i><b>4.2.2</b> Computing variables</a></li>
+<li class="chapter" data-level="4.2.3" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#practice-problems-2"><i class="fa fa-check"></i><b>4.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>5</b> Lab 5: Fundamentals of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="5.1" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#jamovi-5"><i class="fa fa-check"></i><b>5.1</b> JAMOVI</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#experiment-background"><i class="fa fa-check"></i><b>5.1.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#calculate-difference-scores-between-pairs-of-measures-and-conduct-a-sign-test"><i class="fa fa-check"></i><b>5.1.2</b> Calculate difference scores between pairs of measures and conduct a sign test</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#entering-data-for-sign-test-problems"><i class="fa fa-check"></i><b>5.1.3</b> Entering data for sign test problems</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#practice-problems-3"><i class="fa fa-check"></i><b>5.1.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html"><i class="fa fa-check"></i><b>6</b> Lab 6: t-Test (one-sample, paired sample)</a><ul>
+<li class="chapter" data-level="6.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants"><i class="fa fa-check"></i><b>6.1</b> Does Music Convey Social Information to Infants?</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#study-description"><i class="fa fa-check"></i><b>6.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#lab-skills-learned"><i class="fa fa-check"></i><b>6.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="6.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#important-stuff"><i class="fa fa-check"></i><b>6.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="6.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#jamovi-6"><i class="fa fa-check"></i><b>6.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test"><i class="fa fa-check"></i><b>6.4.1</b> Baseline phase: Conduct a one sample t-test</a></li>
+<li class="chapter" data-level="6.4.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#test-phase"><i class="fa fa-check"></i><b>6.4.2</b> Test phase</a></li>
+<li class="chapter" data-level="6.4.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#paired-samples-t-test"><i class="fa fa-check"></i><b>6.4.3</b> Paired-samples t-test</a></li>
+<li class="chapter" data-level="6.4.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#practice-problems-4"><i class="fa fa-check"></i><b>6.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html"><i class="fa fa-check"></i><b>7</b> Lab 7: t-test (Independent Sample)</a><ul>
+<li class="chapter" data-level="7.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say"><i class="fa fa-check"></i><b>7.1</b> Do you come across as smarter when people read what you say or hear what you say?</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#study-description-1"><i class="fa fa-check"></i><b>7.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#lab-skills-learned-1"><i class="fa fa-check"></i><b>7.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="7.3" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#important-stuff-1"><i class="fa fa-check"></i><b>7.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="7.4" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#jamovi-7"><i class="fa fa-check"></i><b>7.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>7.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>7.4.2</b> Performing an independent-samples t-test</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#practice-problems-5"><i class="fa fa-check"></i><b>7.4.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 One-way ANOVA</a><ul>
+<li class="chapter" data-level="8.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#how-to-not-think-about-bad-memories-by-playing-tetris"><i class="fa fa-check"></i><b>8.1</b> How to not think about bad memories by playing Tetris</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#study-description-2"><i class="fa fa-check"></i><b>8.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="8.1.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#study-methods"><i class="fa fa-check"></i><b>8.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#lab-skills-learned-2"><i class="fa fa-check"></i><b>8.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="8.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#important-stuff-2"><i class="fa fa-check"></i><b>8.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="8.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#jamovi-8"><i class="fa fa-check"></i><b>8.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#experiment-background-2"><i class="fa fa-check"></i><b>8.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.4.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>8.4.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="8.4.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>8.4.3</b> Unplanned Comparisons: Post-hoc tests</a></li>
+<li class="chapter" data-level="8.4.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9 Repeated Measures ANOVA</a><ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>9.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-description-3"><i class="fa fa-check"></i><b>9.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="9.1.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-methods-1"><i class="fa fa-check"></i><b>9.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#lab-skills-learned-3"><i class="fa fa-check"></i><b>9.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="9.3" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#important-stuff-3"><i class="fa fa-check"></i><b>9.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="9.4" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#jamovi-9"><i class="fa fa-check"></i><b>9.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>9.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.4.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#conduct-a-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>9.4.2</b> Conduct a One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="9.4.3" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#post-hoc-tests"><i class="fa fa-check"></i><b>9.4.3</b> Post-hoc tests</a></li>
+<li class="chapter" data-level="9.4.4" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html"><i class="fa fa-check"></i><b>10</b> Lab 10: Factorial ANOVA</a><ul>
+<li class="chapter" data-level="10.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#does-standing-up-make-you-focus-more"><i class="fa fa-check"></i><b>10.1</b> Does standing up make you focus more?</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#study-description-4"><i class="fa fa-check"></i><b>10.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="10.1.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#study-methods-2"><i class="fa fa-check"></i><b>10.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#lab-skills-learned-4"><i class="fa fa-check"></i><b>10.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="10.3" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#important-stuff-4"><i class="fa fa-check"></i><b>10.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="10.4" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#jamovi-10"><i class="fa fa-check"></i><b>10.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>10.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.4.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.4.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.4.3" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.4.3</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.4.4" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#practice-problems-8"><i class="fa fa-check"></i><b>10.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html"><i class="fa fa-check"></i><b>11</b> Lab 11: Mixed Factorial ANOVA</a><ul>
+<li class="chapter" data-level="11.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#do-you-remember-things-better-when-you-take-pictures-of-them"><i class="fa fa-check"></i><b>11.1</b> Do you remember things better when you take pictures of them?</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#study-description-5"><i class="fa fa-check"></i><b>11.1.1</b> Study description</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#lab-skills-learned-5"><i class="fa fa-check"></i><b>11.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="11.3" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#important-stuff-5"><i class="fa fa-check"></i><b>11.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="11.4" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#jamovi-11"><i class="fa fa-check"></i><b>11.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>11.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="11.4.2" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.4.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="11.4.3" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#practice-problems-9"><i class="fa fa-check"></i><b>11.4.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface-1.html"><a href="preface-1.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="11.5" data-path="preface-1.html"><a href="preface-1.html#important-notes-1"><i class="fa fa-check"></i><b>11.5</b> Important notes</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="preface-1.html"><a href="preface-1.html#attributions-1"><i class="fa fa-check"></i><b>11.5.1</b> Attributions</a></li>
+<li class="chapter" data-level="11.5.2" data-path="preface-1.html"><a href="preface-1.html#cc-by-sa-4.0-license-1"><i class="fa fa-check"></i><b>11.5.2</b> CC BY-SA 4.0 license</a></li>
+<li class="chapter" data-level="11.5.3" data-path="preface-1.html"><a href="preface-1.html#copying-the-lab-manual-1"><i class="fa fa-check"></i><b>11.5.3</b> Copying the lab manual</a></li>
+<li class="chapter" data-level="11.5.4" data-path="preface-1.html"><a href="preface-1.html#acknowledgments-1"><i class="fa fa-check"></i><b>11.5.4</b> Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="preface-1.html"><a href="preface-1.html#data-1"><i class="fa fa-check"></i><b>11.6</b> Data</a><ul>
+<li class="chapter" data-level="11.6.1" data-path="preface-1.html"><a href="preface-1.html#data-repository-1"><i class="fa fa-check"></i><b>11.6.1</b> Data Repository</a></li>
+<li class="chapter" data-level="11.6.2" data-path="preface-1.html"><a href="preface-1.html#csv-format-1"><i class="fa fa-check"></i><b>11.6.2</b> CSV format</a></li>
+<li class="chapter" data-level="11.6.3" data-path="preface-1.html"><a href="preface-1.html#spss-format-1"><i class="fa fa-check"></i><b>11.6.3</b> SPSS format</a></li>
+</ul></li>
+<li class="chapter" data-level="11.7" data-path="preface-1.html"><a href="preface-1.html#r"><i class="fa fa-check"></i><b>11.7</b> R</a><ul>
+<li class="chapter" data-level="11.7.1" data-path="preface-1.html"><a href="preface-1.html#why-r"><i class="fa fa-check"></i><b>11.7.1</b> Why R?</a></li>
+<li class="chapter" data-level="11.7.2" data-path="preface-1.html"><a href="preface-1.html#installing-r-and-r-studio"><i class="fa fa-check"></i><b>11.7.2</b> Installing R and R Studio</a></li>
+<li class="chapter" data-level="11.7.3" data-path="preface-1.html"><a href="preface-1.html#r-studio-notes-and-tips"><i class="fa fa-check"></i><b>11.7.3</b> R studio notes and tips</a></li>
+<li class="chapter" data-level="11.7.4" data-path="preface-1.html"><a href="preface-1.html#how-to-complete-the-r-labs"><i class="fa fa-check"></i><b>11.7.4</b> How to complete the R Labs</a></li>
+<li class="chapter" data-level="11.7.5" data-path="preface-1.html"><a href="preface-1.html#screencast-tutorial"><i class="fa fa-check"></i><b>11.7.5</b> Screencast tutorial</a></li>
+<li class="chapter" data-level="11.7.6" data-path="preface-1.html"><a href="preface-1.html#r-studio-cloud"><i class="fa fa-check"></i><b>11.7.6</b> R-studio Cloud</a></li>
+</ul></li>
+<li class="chapter" data-level="11.8" data-path="preface-1.html"><a href="preface-1.html#excel"><i class="fa fa-check"></i><b>11.8</b> Excel</a></li>
+<li class="chapter" data-level="11.9" data-path="preface-1.html"><a href="preface-1.html#spss"><i class="fa fa-check"></i><b>11.9</b> SPSS</a></li>
+<li class="chapter" data-level="11.10" data-path="preface-1.html"><a href="preface-1.html#jamovi-12"><i class="fa fa-check"></i><b>11.10</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html"><i class="fa fa-check"></i><b>12</b> Lab 1: Graphing Data</a><ul>
+<li class="chapter" data-level="12.1" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#general-goals-4"><i class="fa fa-check"></i><b>12.1</b> General Goals</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#important-info-3"><i class="fa fa-check"></i><b>12.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#r-1"><i class="fa fa-check"></i><b>12.2</b> R</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#download-the-lab-templates"><i class="fa fa-check"></i><b>12.2.1</b> Download the lab templates</a></li>
+<li class="chapter" data-level="12.2.2" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#get-some-data"><i class="fa fa-check"></i><b>12.2.2</b> Get some data</a></li>
+<li class="chapter" data-level="12.2.3" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#look-at-the-data"><i class="fa fa-check"></i><b>12.2.3</b> Look at the data</a></li>
+<li class="chapter" data-level="12.2.4" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#make-plots-to-answer-questions"><i class="fa fa-check"></i><b>12.2.4</b> Make Plots to answer questions</a></li>
+<li class="chapter" data-level="12.2.5" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#ggplot2-basics"><i class="fa fa-check"></i><b>12.2.5</b> ggplot2 basics</a></li>
+<li class="chapter" data-level="12.2.6" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#more-questions-about-nyc-films"><i class="fa fa-check"></i><b>12.2.6</b> More questions about NYC films</a></li>
+<li class="chapter" data-level="12.2.7" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#gapminder-data"><i class="fa fa-check"></i><b>12.2.7</b> Gapminder Data</a></li>
+<li class="chapter" data-level="12.2.8" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#asking-questions-with-the-gap-minder-data"><i class="fa fa-check"></i><b>12.2.8</b> Asking Questions with the gap minder data</a></li>
+<li class="chapter" data-level="12.2.9" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#generalization-exercise"><i class="fa fa-check"></i><b>12.2.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="12.2.10" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#writing-assignment"><i class="fa fa-check"></i><b>12.2.10</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#excel-1"><i class="fa fa-check"></i><b>12.3</b> Excel</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#goals"><i class="fa fa-check"></i><b>12.3.1</b> Goals</a></li>
+<li class="chapter" data-level="12.3.2" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#load-the-data"><i class="fa fa-check"></i><b>12.3.2</b> Load the data</a></li>
+<li class="chapter" data-level="12.3.3" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#inspect-the-data"><i class="fa fa-check"></i><b>12.3.3</b> Inspect the data</a></li>
+<li class="chapter" data-level="12.3.4" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#preparing-the-data"><i class="fa fa-check"></i><b>12.3.4</b> Preparing the data</a></li>
+<li class="chapter" data-level="12.3.5" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#bar-graph-by-borough"><i class="fa fa-check"></i><b>12.3.5</b> Bar graph by borough</a></li>
+<li class="chapter" data-level="12.3.6" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#bar-graph-by-type-brooklyn-only"><i class="fa fa-check"></i><b>12.3.6</b> Bar graph by type, Brooklyn only</a></li>
+<li class="chapter" data-level="12.3.7" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#histogram-of-permit-duration"><i class="fa fa-check"></i><b>12.3.7</b> Histogram of permit duration</a></li>
+<li class="chapter" data-level="12.3.8" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#reporting-and-interpreting-our-results"><i class="fa fa-check"></i><b>12.3.8</b> Reporting and interpreting our results</a></li>
+<li class="chapter" data-level="12.3.9" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#on-your-own"><i class="fa fa-check"></i><b>12.3.9</b> On Your Own</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#spss-1"><i class="fa fa-check"></i><b>12.4</b> SPSS</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#opening-spss-and-the-spss-layout"><i class="fa fa-check"></i><b>12.4.1</b> Opening SPSS and the SPSS layout</a></li>
+<li class="chapter" data-level="12.4.2" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#reviewing-variable-properties-and-the-variable-view-tab"><i class="fa fa-check"></i><b>12.4.2</b> Reviewing variable properties and the Variable View tab</a></li>
+<li class="chapter" data-level="12.4.3" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#opening-a-data-file-and-producing-different-types-of-graphs"><i class="fa fa-check"></i><b>12.4.3</b> Opening a data file and producing different types of graphs</a></li>
+<li class="chapter" data-level="12.4.4" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#practice-problems-10"><i class="fa fa-check"></i><b>12.4.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="lab-1-graphing-data-1.html"><a href="lab-1-graphing-data-1.html#jamovi-13"><i class="fa fa-check"></i><b>12.5</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html"><i class="fa fa-check"></i><b>13</b> Lab 2: Descriptive Statistics</a><ul>
+<li class="chapter" data-level="13.1" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#general-goals-5"><i class="fa fa-check"></i><b>13.1</b> General Goals</a><ul>
+<li class="chapter" data-level="13.1.1" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#important-info-4"><i class="fa fa-check"></i><b>13.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#r-2"><i class="fa fa-check"></i><b>13.2</b> R</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#descriptives-basics-in-r"><i class="fa fa-check"></i><b>13.2.1</b> Descriptives basics in R</a></li>
+<li class="chapter" data-level="13.2.2" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#central-tendency"><i class="fa fa-check"></i><b>13.2.2</b> Central Tendency</a></li>
+<li class="chapter" data-level="13.2.3" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#variation"><i class="fa fa-check"></i><b>13.2.3</b> Variation</a></li>
+<li class="chapter" data-level="13.2.4" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#descriptives-by-conditions"><i class="fa fa-check"></i><b>13.2.4</b> Descriptives by conditions</a></li>
+<li class="chapter" data-level="13.2.5" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#describing-gapminder"><i class="fa fa-check"></i><b>13.2.5</b> Describing gapminder</a></li>
+<li class="chapter" data-level="13.2.6" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#generalization-exercise-1"><i class="fa fa-check"></i><b>13.2.6</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="13.2.7" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#writing-assignment-1"><i class="fa fa-check"></i><b>13.2.7</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#excel-2"><i class="fa fa-check"></i><b>13.3</b> Excel</a></li>
+<li class="chapter" data-level="13.4" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#spss-2"><i class="fa fa-check"></i><b>13.4</b> SPSS</a><ul>
+<li class="chapter" data-level="13.4.1" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#calculating-descriptive-statistics"><i class="fa fa-check"></i><b>13.4.1</b> Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="13.4.2" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#descriptive-statistics-and-histograms-1"><i class="fa fa-check"></i><b>13.4.2</b> Descriptive Statistics and Histograms</a></li>
+<li class="chapter" data-level="13.4.3" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#editing-graphs"><i class="fa fa-check"></i><b>13.4.3</b> Editing graphs</a></li>
+<li class="chapter" data-level="13.4.4" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#practice-problems-11"><i class="fa fa-check"></i><b>13.4.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="lab-2-descriptive-statistics-1.html"><a href="lab-2-descriptive-statistics-1.html#jamovi-14"><i class="fa fa-check"></i><b>13.5</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html"><i class="fa fa-check"></i><b>14</b> Lab 3: Correlation</a><ul>
+<li class="chapter" data-level="14.1" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#general-goals-6"><i class="fa fa-check"></i><b>14.1</b> General Goals</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#important-info-5"><i class="fa fa-check"></i><b>14.1.1</b> Important Info</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#r-3"><i class="fa fa-check"></i><b>14.2</b> R</a><ul>
+<li class="chapter" data-level="14.2.1" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#cor-for-correlation"><i class="fa fa-check"></i><b>14.2.1</b> cor for correlation</a></li>
+<li class="chapter" data-level="14.2.2" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#world-happiness-report"><i class="fa fa-check"></i><b>14.2.2</b> World Happiness Report</a></li>
+<li class="chapter" data-level="14.2.3" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#generalization-exercise-2"><i class="fa fa-check"></i><b>14.2.3</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="14.2.4" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#writing-assignment-2"><i class="fa fa-check"></i><b>14.2.4</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#excel-3"><i class="fa fa-check"></i><b>14.3</b> Excel</a></li>
+<li class="chapter" data-level="14.4" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#spss-3"><i class="fa fa-check"></i><b>14.4</b> SPSS</a><ul>
+<li class="chapter" data-level="14.4.1" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#correlation-coefficient-for-bivariate-data-two-variables-1"><i class="fa fa-check"></i><b>14.4.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="14.4.2" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#correlation-matrix"><i class="fa fa-check"></i><b>14.4.2</b> Correlation Matrix</a></li>
+<li class="chapter" data-level="14.4.3" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#correlation-and-scatterplots-1"><i class="fa fa-check"></i><b>14.4.3</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="14.4.4" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#splitting-a-file"><i class="fa fa-check"></i><b>14.4.4</b> Splitting a File</a></li>
+<li class="chapter" data-level="14.4.5" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#practice-problems-12"><i class="fa fa-check"></i><b>14.4.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="lab-3-correlation-1.html"><a href="lab-3-correlation-1.html#jamovi-15"><i class="fa fa-check"></i><b>14.5</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html"><i class="fa fa-check"></i><b>15</b> Lab 4: Normal Distribution &amp; Central Limit Theorem</a><ul>
+<li class="chapter" data-level="15.1" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#general-goals-7"><i class="fa fa-check"></i><b>15.1</b> General Goals</a></li>
+<li class="chapter" data-level="15.2" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#r-4"><i class="fa fa-check"></i><b>15.2</b> R</a><ul>
+<li class="chapter" data-level="15.2.1" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#generating-numbers-in-r"><i class="fa fa-check"></i><b>15.2.1</b> Generating Numbers in R</a></li>
+<li class="chapter" data-level="15.2.2" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#sampling-distribution-of-the-mean."><i class="fa fa-check"></i><b>15.2.2</b> sampling distribution of the mean.</a></li>
+<li class="chapter" data-level="15.2.3" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#sampling-distributions-for-any-statistic"><i class="fa fa-check"></i><b>15.2.3</b> Sampling distributions for any statistic</a></li>
+<li class="chapter" data-level="15.2.4" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#central-limit-theorem"><i class="fa fa-check"></i><b>15.2.4</b> Central limit theorem</a></li>
+<li class="chapter" data-level="15.2.5" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#the-normal-distribution"><i class="fa fa-check"></i><b>15.2.5</b> The normal distribution</a></li>
+<li class="chapter" data-level="15.2.6" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#z-scores"><i class="fa fa-check"></i><b>15.2.6</b> z-scores</a></li>
+<li class="chapter" data-level="15.2.7" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#generalization-exercise-3"><i class="fa fa-check"></i><b>15.2.7</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="15.2.8" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#writing-assignment-3"><i class="fa fa-check"></i><b>15.2.8</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#excel-4"><i class="fa fa-check"></i><b>15.3</b> Excel</a></li>
+<li class="chapter" data-level="15.4" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#spss-4"><i class="fa fa-check"></i><b>15.4</b> SPSS</a><ul>
+<li class="chapter" data-level="15.4.1" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#saving-data-as-standardized-values.-1"><i class="fa fa-check"></i><b>15.4.1</b> Saving data as standardized values.</a></li>
+<li class="chapter" data-level="15.4.2" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#computing-variables-1"><i class="fa fa-check"></i><b>15.4.2</b> Computing variables</a></li>
+<li class="chapter" data-level="15.4.3" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#practice-problems-13"><i class="fa fa-check"></i><b>15.4.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="lab-4-normal-distribution-central-limit-theorem-1.html"><a href="lab-4-normal-distribution-central-limit-theorem-1.html#jamovi-16"><i class="fa fa-check"></i><b>15.5</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html"><i class="fa fa-check"></i><b>16</b> Lab 5: Fundamentals of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="16.1" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#r-5"><i class="fa fa-check"></i><b>16.1</b> R</a><ul>
+<li class="chapter" data-level="16.1.1" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#the-crump-test"><i class="fa fa-check"></i><b>16.1.1</b> The Crump Test</a></li>
+<li class="chapter" data-level="16.1.2" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#crumping-real-data"><i class="fa fa-check"></i><b>16.1.2</b> Crumping real data</a></li>
+<li class="chapter" data-level="16.1.3" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#the-randomization-test"><i class="fa fa-check"></i><b>16.1.3</b> The Randomization Test</a></li>
+<li class="chapter" data-level="16.1.4" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#generalization-exercise-4"><i class="fa fa-check"></i><b>16.1.4</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="16.1.5" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#writing-assignment-4"><i class="fa fa-check"></i><b>16.1.5</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#excel-5"><i class="fa fa-check"></i><b>16.2</b> Excel</a></li>
+<li class="chapter" data-level="16.3" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#spss-5"><i class="fa fa-check"></i><b>16.3</b> SPSS</a><ul>
+<li class="chapter" data-level="16.3.1" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#experiment-background-6"><i class="fa fa-check"></i><b>16.3.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="16.3.2" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#calculate-difference-scores-between-pairs-of-measures"><i class="fa fa-check"></i><b>16.3.2</b> Calculate difference scores between pairs of measures</a></li>
+<li class="chapter" data-level="16.3.3" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#conduct-a-sign-test"><i class="fa fa-check"></i><b>16.3.3</b> Conduct a sign test</a></li>
+<li class="chapter" data-level="16.3.4" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#entering-data-for-sign-test-problems-1"><i class="fa fa-check"></i><b>16.3.4</b> Entering data for sign test problems</a></li>
+<li class="chapter" data-level="16.3.5" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#practice-problems-14"><i class="fa fa-check"></i><b>16.3.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="lab-5-fundamentals-of-hypothesis-testing-1.html"><a href="lab-5-fundamentals-of-hypothesis-testing-1.html#jamovi-17"><i class="fa fa-check"></i><b>16.4</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html"><i class="fa fa-check"></i><b>17</b> Lab 6: t-Test (one-sample, paired sample)</a><ul>
+<li class="chapter" data-level="17.1" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#does-music-convey-social-information-to-infants-1"><i class="fa fa-check"></i><b>17.1</b> Does Music Convey Social Information to Infants?</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#study-description-6"><i class="fa fa-check"></i><b>17.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#lab-skills-learned-6"><i class="fa fa-check"></i><b>17.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="17.3" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#important-stuff-6"><i class="fa fa-check"></i><b>17.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="17.4" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#r-6"><i class="fa fa-check"></i><b>17.4</b> R</a><ul>
+<li class="chapter" data-level="17.4.1" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#loading-the-data"><i class="fa fa-check"></i><b>17.4.1</b> Loading the data</a></li>
+<li class="chapter" data-level="17.4.2" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#inspect-the-data-frame"><i class="fa fa-check"></i><b>17.4.2</b> Inspect the data frame</a></li>
+<li class="chapter" data-level="17.4.3" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#get-the-data-for-experiment-one"><i class="fa fa-check"></i><b>17.4.3</b> Get the data for Experiment one</a></li>
+<li class="chapter" data-level="17.4.4" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#baseline-phase-conduct-a-one-sample-t-test-1"><i class="fa fa-check"></i><b>17.4.4</b> Baseline phase: Conduct a one sample t-test</a></li>
+<li class="chapter" data-level="17.4.5" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#test-phase-1"><i class="fa fa-check"></i><b>17.4.5</b> Test phase</a></li>
+<li class="chapter" data-level="17.4.6" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#paired-samples-t-test-1"><i class="fa fa-check"></i><b>17.4.6</b> Paired-samples t-test</a></li>
+<li class="chapter" data-level="17.4.7" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#graphing-the-findings"><i class="fa fa-check"></i><b>17.4.7</b> Graphing the findings</a></li>
+<li class="chapter" data-level="17.4.8" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#data-simulation"><i class="fa fa-check"></i><b>17.4.8</b> Data-simulation</a></li>
+<li class="chapter" data-level="17.4.9" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#generalization-exercise-5"><i class="fa fa-check"></i><b>17.4.9</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="17.4.10" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#writing-assignment-5"><i class="fa fa-check"></i><b>17.4.10</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#excel-6"><i class="fa fa-check"></i><b>17.5</b> Excel</a></li>
+<li class="chapter" data-level="17.6" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#spss-6"><i class="fa fa-check"></i><b>17.6</b> SPSS</a><ul>
+<li class="chapter" data-level="17.6.1" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#experiment-background-7"><i class="fa fa-check"></i><b>17.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="17.6.2" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#performing-a-one-sample-t-test"><i class="fa fa-check"></i><b>17.6.2</b> Performing a one-sample t-test</a></li>
+<li class="chapter" data-level="17.6.3" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#performing-a-paired-samples-t-test"><i class="fa fa-check"></i><b>17.6.3</b> Performing a paired-samples t-test</a></li>
+<li class="chapter" data-level="17.6.4" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#graphing-your-results"><i class="fa fa-check"></i><b>17.6.4</b> Graphing your results</a></li>
+<li class="chapter" data-level="17.6.5" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#the-relationship-between-the-one-sample-and-the-paired-samples-t-test"><i class="fa fa-check"></i><b>17.6.5</b> The relationship between the one-sample and the paired-samples t-test</a></li>
+<li class="chapter" data-level="17.6.6" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#practice-problems-15"><i class="fa fa-check"></i><b>17.6.6</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="lab-6-t-test-one-sample-paired-sample-1.html"><a href="lab-6-t-test-one-sample-paired-sample-1.html#jamovi-18"><i class="fa fa-check"></i><b>17.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html"><i class="fa fa-check"></i><b>18</b> Lab 7: t-test (Independent Sample)</a><ul>
+<li class="chapter" data-level="18.1" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say-1"><i class="fa fa-check"></i><b>18.1</b> Do you come across as smarter when people read what you say or hear what you say?</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#study-description-7"><i class="fa fa-check"></i><b>18.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#lab-skills-learned-7"><i class="fa fa-check"></i><b>18.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="18.3" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#important-stuff-7"><i class="fa fa-check"></i><b>18.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="18.4" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#r-7"><i class="fa fa-check"></i><b>18.4</b> R</a><ul>
+<li class="chapter" data-level="18.4.1" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#load-the-data-2"><i class="fa fa-check"></i><b>18.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="18.4.2" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#inspect-data-frame"><i class="fa fa-check"></i><b>18.4.2</b> Inspect data frame</a></li>
+<li class="chapter" data-level="18.4.3" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#find-the-data-you-need"><i class="fa fa-check"></i><b>18.4.3</b> Find the data you need</a></li>
+<li class="chapter" data-level="18.4.4" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#look-at-the-dependent-variable."><i class="fa fa-check"></i><b>18.4.4</b> Look at the dependent variable.</a></li>
+<li class="chapter" data-level="18.4.5" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#conduct-independent-samples-t-test"><i class="fa fa-check"></i><b>18.4.5</b> Conduct Independent samples t-test</a></li>
+<li class="chapter" data-level="18.4.6" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#remaining-ratings"><i class="fa fa-check"></i><b>18.4.6</b> Remaining ratings</a></li>
+<li class="chapter" data-level="18.4.7" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#reconstructing-the-graph-from-the-paper"><i class="fa fa-check"></i><b>18.4.7</b> Reconstructing the graph from the paper</a></li>
+<li class="chapter" data-level="18.4.8" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#generalization-exercise-6"><i class="fa fa-check"></i><b>18.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="18.4.9" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#writing-assignment-6"><i class="fa fa-check"></i><b>18.4.9</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="18.5" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#excel-7"><i class="fa fa-check"></i><b>18.5</b> Excel</a></li>
+<li class="chapter" data-level="18.6" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#spss-7"><i class="fa fa-check"></i><b>18.6</b> SPSS</a><ul>
+<li class="chapter" data-level="18.6.1" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#experiment-background-8"><i class="fa fa-check"></i><b>18.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="18.6.2" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#performing-an-independent-samples-t-test-1"><i class="fa fa-check"></i><b>18.6.2</b> Performing an independent-samples t-test</a></li>
+<li class="chapter" data-level="18.6.3" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#graphing-your-data"><i class="fa fa-check"></i><b>18.6.3</b> Graphing your data</a></li>
+<li class="chapter" data-level="18.6.4" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#practice-problems-16"><i class="fa fa-check"></i><b>18.6.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="18.7" data-path="lab-7-t-test-independent-sample-1.html"><a href="lab-7-t-test-independent-sample-1.html#jamovi-19"><i class="fa fa-check"></i><b>18.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html"><i class="fa fa-check"></i><b>19</b> Lab 8 One-way ANOVA</a><ul>
+<li class="chapter" data-level="19.1" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#how-to-not-think-about-bad-memories-by-playing-tetris-1"><i class="fa fa-check"></i><b>19.1</b> How to not think about bad memories by playing Tetris</a><ul>
+<li class="chapter" data-level="19.1.1" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#study-description-8"><i class="fa fa-check"></i><b>19.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="19.1.2" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#study-methods-3"><i class="fa fa-check"></i><b>19.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="19.2" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#lab-skills-learned-8"><i class="fa fa-check"></i><b>19.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="19.3" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#important-stuff-8"><i class="fa fa-check"></i><b>19.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="19.4" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#r-8"><i class="fa fa-check"></i><b>19.4</b> R</a><ul>
+<li class="chapter" data-level="19.4.1" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#load-the-data-3"><i class="fa fa-check"></i><b>19.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="19.4.2" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#inspect-the-dataframe"><i class="fa fa-check"></i><b>19.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="19.4.3" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#get-the-data-you-need"><i class="fa fa-check"></i><b>19.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="19.4.4" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#look-at-the-data-2"><i class="fa fa-check"></i><b>19.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="19.4.5" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#conduct-the-anova"><i class="fa fa-check"></i><b>19.4.5</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="19.4.6" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#reporting-the-anova-results"><i class="fa fa-check"></i><b>19.4.6</b> Reporting the ANOVA results</a></li>
+<li class="chapter" data-level="19.4.7" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#individual-comparisons"><i class="fa fa-check"></i><b>19.4.7</b> Individual comparisons</a></li>
+<li class="chapter" data-level="19.4.8" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#writing-it-all-up."><i class="fa fa-check"></i><b>19.4.8</b> Writing it all up.</a></li>
+<li class="chapter" data-level="19.4.9" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#food-for-thought"><i class="fa fa-check"></i><b>19.4.9</b> Food for thought</a></li>
+</ul></li>
+<li class="chapter" data-level="19.5" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#control-vs-reactivationtetris"><i class="fa fa-check"></i><b>19.5</b> control vs reactivation+Tetris</a></li>
+<li class="chapter" data-level="19.6" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#tetris_only-vs-reactivationtetris"><i class="fa fa-check"></i><b>19.6</b> Tetris_only vs reactivation+Tetris</a><ul>
+<li class="chapter" data-level="19.6.1" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#generalization-exercise-7"><i class="fa fa-check"></i><b>19.6.1</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="19.6.2" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#writing-assignment-7"><i class="fa fa-check"></i><b>19.6.2</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="19.7" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#excel-8"><i class="fa fa-check"></i><b>19.7</b> Excel</a></li>
+<li class="chapter" data-level="19.8" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#spss-8"><i class="fa fa-check"></i><b>19.8</b> SPSS</a><ul>
+<li class="chapter" data-level="19.8.1" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#experiment-background-9"><i class="fa fa-check"></i><b>19.8.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="19.8.2" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data-1"><i class="fa fa-check"></i><b>19.8.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="19.8.3" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#planned-comparisons-t-tests"><i class="fa fa-check"></i><b>19.8.3</b> Planned Comparisons: T-tests</a></li>
+<li class="chapter" data-level="19.8.4" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#unplanned-comparisons-post-hoc-tests-1"><i class="fa fa-check"></i><b>19.8.4</b> Unplanned Comparisons: Post-hoc tests</a></li>
+<li class="chapter" data-level="19.8.5" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#practice-problems-17"><i class="fa fa-check"></i><b>19.8.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="19.9" data-path="lab-8-one-way-anova-1.html"><a href="lab-8-one-way-anova-1.html#jamovi-20"><i class="fa fa-check"></i><b>19.9</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html"><i class="fa fa-check"></i><b>20</b> Lab 9 Repeated Measures ANOVA</a><ul>
+<li class="chapter" data-level="20.1" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try-1"><i class="fa fa-check"></i><b>20.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a><ul>
+<li class="chapter" data-level="20.1.1" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#study-description-9"><i class="fa fa-check"></i><b>20.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="20.1.2" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#study-methods-4"><i class="fa fa-check"></i><b>20.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="20.2" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#lab-skills-learned-9"><i class="fa fa-check"></i><b>20.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="20.3" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#important-stuff-9"><i class="fa fa-check"></i><b>20.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="20.4" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#r-9"><i class="fa fa-check"></i><b>20.4</b> R</a><ul>
+<li class="chapter" data-level="20.4.1" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#load-the-data-4"><i class="fa fa-check"></i><b>20.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="20.4.2" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#inspect-the-dataframe-1"><i class="fa fa-check"></i><b>20.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="20.4.3" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-the-data-you-need-1"><i class="fa fa-check"></i><b>20.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="20.4.4" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#look-at-the-data-3"><i class="fa fa-check"></i><b>20.4.4</b> Look at the data</a></li>
+<li class="chapter" data-level="20.4.5" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#look-at-the-means"><i class="fa fa-check"></i><b>20.4.5</b> Look at the means</a></li>
+</ul></li>
+<li class="chapter" data-level="20.5" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-subject-mean-rts"><i class="fa fa-check"></i><b>20.5</b> get subject mean RTs</a></li>
+<li class="chapter" data-level="20.6" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-condition-mean-rts"><i class="fa fa-check"></i><b>20.6</b> get condition mean RTs</a></li>
+<li class="chapter" data-level="20.7" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#plot-the-condition-means"><i class="fa fa-check"></i><b>20.7</b> plot the condition means</a></li>
+<li class="chapter" data-level="20.8" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-subject-mean-rts-1"><i class="fa fa-check"></i><b>20.8</b> get subject mean RTs</a></li>
+<li class="chapter" data-level="20.9" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-condition-mean-rts-1"><i class="fa fa-check"></i><b>20.9</b> get condition mean RTs</a></li>
+<li class="chapter" data-level="20.10" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#plot-the-condition-means-1"><i class="fa fa-check"></i><b>20.10</b> plot the condition means</a><ul>
+<li class="chapter" data-level="20.10.1" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#conduct-the-repeated-measures-anova"><i class="fa fa-check"></i><b>20.10.1</b> Conduct the repeated Measures ANOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="20.11" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-subject-mean-rts-2"><i class="fa fa-check"></i><b>20.11</b> get subject mean RTs</a></li>
+<li class="chapter" data-level="20.12" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#get-condition-mean-rts-2"><i class="fa fa-check"></i><b>20.12</b> get condition mean RTs</a><ul>
+<li class="chapter" data-level="20.12.1" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#follow-up-comparisons"><i class="fa fa-check"></i><b>20.12.1</b> Follow-up comparisons</a></li>
+<li class="chapter" data-level="20.12.2" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#reporting-everything"><i class="fa fa-check"></i><b>20.12.2</b> Reporting everything</a></li>
+<li class="chapter" data-level="20.12.3" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#generalization-exercise-8"><i class="fa fa-check"></i><b>20.12.3</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="20.12.4" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#writing-assignment-8"><i class="fa fa-check"></i><b>20.12.4</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="20.13" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#excel-9"><i class="fa fa-check"></i><b>20.13</b> Excel</a></li>
+<li class="chapter" data-level="20.14" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#spss-9"><i class="fa fa-check"></i><b>20.14</b> SPSS</a><ul>
+<li class="chapter" data-level="20.14.1" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#experiment-background-10"><i class="fa fa-check"></i><b>20.14.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="20.14.2" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#produce-a-frequency-histogram-and-remove-outliers"><i class="fa fa-check"></i><b>20.14.2</b> Produce a frequency histogram and remove outliers</a></li>
+<li class="chapter" data-level="20.14.3" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#conduct-and-graph-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>20.14.3</b> Conduct and graph One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="20.14.4" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#conduct-planned-comparisons-using-a-paired-samples-t-test"><i class="fa fa-check"></i><b>20.14.4</b> Conduct planned comparisons using a paired-samples t-test</a></li>
+<li class="chapter" data-level="20.14.5" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#practice-problems-18"><i class="fa fa-check"></i><b>20.14.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="20.15" data-path="lab-9-repeated-measures-anova-1.html"><a href="lab-9-repeated-measures-anova-1.html#jamovi-21"><i class="fa fa-check"></i><b>20.15</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html"><i class="fa fa-check"></i><b>21</b> Lab 10: Factorial ANOVA</a><ul>
+<li class="chapter" data-level="21.1" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#does-standing-up-make-you-focus-more-1"><i class="fa fa-check"></i><b>21.1</b> Does standing up make you focus more?</a><ul>
+<li class="chapter" data-level="21.1.1" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#study-description-10"><i class="fa fa-check"></i><b>21.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="21.1.2" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#study-methods-5"><i class="fa fa-check"></i><b>21.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="21.2" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#lab-skills-learned-10"><i class="fa fa-check"></i><b>21.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="21.3" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#important-stuff-10"><i class="fa fa-check"></i><b>21.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="21.4" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#r-10"><i class="fa fa-check"></i><b>21.4</b> R</a><ul>
+<li class="chapter" data-level="21.4.1" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#load-the-data-5"><i class="fa fa-check"></i><b>21.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="21.4.2" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#inspect-the-dataframe-2"><i class="fa fa-check"></i><b>21.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="21.4.3" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#get-the-data-you-need-2"><i class="fa fa-check"></i><b>21.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="21.4.4" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#get-the-data-into-the-format-you-want"><i class="fa fa-check"></i><b>21.4.4</b> Get the data into the format you want</a></li>
+<li class="chapter" data-level="21.4.5" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#look-at-the-data-4"><i class="fa fa-check"></i><b>21.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="21.4.6" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#look-at-the-means-1"><i class="fa fa-check"></i><b>21.4.6</b> Look at the means</a></li>
+<li class="chapter" data-level="21.4.7" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#conduct-the-anova-1"><i class="fa fa-check"></i><b>21.4.7</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="21.4.8" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#between-subjects-anova"><i class="fa fa-check"></i><b>21.4.8</b> Between Subjects ANOVA</a></li>
+<li class="chapter" data-level="21.4.9" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#repeated-measures-anova"><i class="fa fa-check"></i><b>21.4.9</b> Repeated measures ANOVA</a></li>
+<li class="chapter" data-level="21.4.10" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#follow-up-comparisons-1"><i class="fa fa-check"></i><b>21.4.10</b> Follow-up comparisons</a></li>
+<li class="chapter" data-level="21.4.11" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#generalization-exercise-9"><i class="fa fa-check"></i><b>21.4.11</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="21.4.12" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#writing-asignment"><i class="fa fa-check"></i><b>21.4.12</b> Writing asignment</a></li>
+</ul></li>
+<li class="chapter" data-level="21.5" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#excel-10"><i class="fa fa-check"></i><b>21.5</b> Excel</a></li>
+<li class="chapter" data-level="21.6" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#spss-10"><i class="fa fa-check"></i><b>21.6</b> SPSS</a><ul>
+<li class="chapter" data-level="21.6.1" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#experiment-background-11"><i class="fa fa-check"></i><b>21.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="21.6.2" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova-1"><i class="fa fa-check"></i><b>21.6.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="21.6.3" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#calculate-simple-effects"><i class="fa fa-check"></i><b>21.6.3</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="21.6.4" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova-1"><i class="fa fa-check"></i><b>21.6.4</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="21.6.5" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#calculate-simple-effects-1"><i class="fa fa-check"></i><b>21.6.5</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="21.6.6" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#practice-problems-19"><i class="fa fa-check"></i><b>21.6.6</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="21.7" data-path="lab-10-factorial-anova-1.html"><a href="lab-10-factorial-anova-1.html#jamovi-22"><i class="fa fa-check"></i><b>21.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html"><i class="fa fa-check"></i><b>22</b> Lab 11: Mixed Factorial ANOVA</a><ul>
+<li class="chapter" data-level="22.1" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#do-you-remember-things-better-when-you-take-pictures-of-them-1"><i class="fa fa-check"></i><b>22.1</b> Do you remember things better when you take pictures of them?</a><ul>
+<li class="chapter" data-level="22.1.1" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#study-description-11"><i class="fa fa-check"></i><b>22.1.1</b> Study description</a></li>
+</ul></li>
+<li class="chapter" data-level="22.2" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#lab-skills-learned-11"><i class="fa fa-check"></i><b>22.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="22.3" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#important-stuff-11"><i class="fa fa-check"></i><b>22.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="22.4" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#r-11"><i class="fa fa-check"></i><b>22.4</b> R</a><ul>
+<li class="chapter" data-level="22.4.1" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#load-the-data-6"><i class="fa fa-check"></i><b>22.4.1</b> Load the data</a></li>
+<li class="chapter" data-level="22.4.2" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#inspect-the-dataframe-3"><i class="fa fa-check"></i><b>22.4.2</b> Inspect the dataframe</a></li>
+<li class="chapter" data-level="22.4.3" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#get-the-data-you-need-3"><i class="fa fa-check"></i><b>22.4.3</b> Get the data you need</a></li>
+<li class="chapter" data-level="22.4.4" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#get-the-data-into-the-format-you-want-1"><i class="fa fa-check"></i><b>22.4.4</b> Get the data into the format you want</a></li>
+<li class="chapter" data-level="22.4.5" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#look-at-the-data-5"><i class="fa fa-check"></i><b>22.4.5</b> Look at the data</a></li>
+<li class="chapter" data-level="22.4.6" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#look-at-the-means-2"><i class="fa fa-check"></i><b>22.4.6</b> Look at the means</a></li>
+<li class="chapter" data-level="22.4.7" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#conduct-the-anova-2"><i class="fa fa-check"></i><b>22.4.7</b> Conduct the ANOVA</a></li>
+<li class="chapter" data-level="22.4.8" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#generalization-exercise-10"><i class="fa fa-check"></i><b>22.4.8</b> Generalization Exercise</a></li>
+<li class="chapter" data-level="22.4.9" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#writing-assignment-9"><i class="fa fa-check"></i><b>22.4.9</b> Writing assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="22.5" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#excel-11"><i class="fa fa-check"></i><b>22.5</b> Excel</a></li>
+<li class="chapter" data-level="22.6" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#spss-11"><i class="fa fa-check"></i><b>22.6</b> SPSS</a><ul>
+<li class="chapter" data-level="22.6.1" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#experiment-background-12"><i class="fa fa-check"></i><b>22.6.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="22.6.2" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#conduct-a-mixed-factorial-analysis-of-variance-anova-1"><i class="fa fa-check"></i><b>22.6.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="22.6.3" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#calculate-simple-effects-2"><i class="fa fa-check"></i><b>22.6.3</b> Calculate simple effects</a></li>
+<li class="chapter" data-level="22.6.4" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#practice-problems-20"><i class="fa fa-check"></i><b>22.6.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="22.7" data-path="lab-11-mixed-factorial-anova-1.html"><a href="lab-11-mixed-factorial-anova-1.html#jamovi-23"><i class="fa fa-check"></i><b>22.7</b> JAMOVI</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Answering questions with data: Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<img src="LabmanualCover.png" id="coverpic" width="350" style="display: block; margin: auto;" />
+<div id="lab-4-normal-distribution-central-limit-theorem-1" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> Lab 4: Normal Distribution &amp; Central Limit Theorem</h1>
+<p>Placeholder</p>
+<div id="general-goals-7" class="section level2">
+<h2><span class="header-section-number">15.1</span> General Goals</h2>
+</div>
+<div id="r-4" class="section level2">
+<h2><span class="header-section-number">15.2</span> R</h2>
+<div id="generating-numbers-in-r" class="section level3">
+<h3><span class="header-section-number">15.2.1</span> Generating Numbers in R</h3>
+<div id="sample" class="section level4">
+<h4><span class="header-section-number">15.2.1.1</span> sample</h4>
+</div>
+<div id="runif-uniform-distribution" class="section level4">
+<h4><span class="header-section-number">15.2.1.2</span> runif uniform distribution</h4>
+</div>
+<div id="rbinom-the-binomial-distribution" class="section level4">
+<h4><span class="header-section-number">15.2.1.3</span> rbinom the binomial distribution</h4>
+</div>
+<div id="rnorm-the-normal-distribution" class="section level4">
+<h4><span class="header-section-number">15.2.1.4</span> rnorm the normal distribution</h4>
+</div>
+<div id="mixing-it-up" class="section level4">
+<h4><span class="header-section-number">15.2.1.5</span> mixing it up</h4>
+</div>
+<div id="summary" class="section level4">
+<h4><span class="header-section-number">15.2.1.6</span> summary</h4>
+</div>
+</div>
+<div id="sampling-distribution-of-the-mean." class="section level3">
+<h3><span class="header-section-number">15.2.2</span> sampling distribution of the mean.</h3>
+<div id="taking-multiple-samples-of-the-same-size" class="section level4">
+<h4><span class="header-section-number">15.2.2.1</span> Taking multiple samples of the same size</h4>
+</div>
+<div id="getting-the-means-of-the-samples" class="section level4">
+<h4><span class="header-section-number">15.2.2.2</span> Getting the means of the samples</h4>
+</div>
+<div id="simulating-the-distribution-of-sample-means" class="section level4">
+<h4><span class="header-section-number">15.2.2.3</span> simulating the distribution of sample means</h4>
+</div>
+</div>
+<div id="sampling-distributions-for-any-statistic" class="section level3">
+<h3><span class="header-section-number">15.2.3</span> Sampling distributions for any statistic</h3>
+</div>
+<div id="central-limit-theorem" class="section level3">
+<h3><span class="header-section-number">15.2.4</span> Central limit theorem</h3>
+</div>
+<div id="the-normal-distribution" class="section level3">
+<h3><span class="header-section-number">15.2.5</span> The normal distribution</h3>
+<div id="graphing-the-normal-distribution" class="section level4">
+<h4><span class="header-section-number">15.2.5.1</span> Graphing the normal distribution</h4>
+</div>
+<div id="calculating-the-probability-of-specific-ranges." class="section level4">
+<h4><span class="header-section-number">15.2.5.2</span> calculating the probability of specific ranges.</h4>
+</div>
+<div id="summary-pnorm" class="section level4">
+<h4><span class="header-section-number">15.2.5.3</span> summary pnorm</h4>
+</div>
+</div>
+<div id="z-scores" class="section level3">
+<h3><span class="header-section-number">15.2.6</span> z-scores</h3>
+<div id="calculating-z-scores" class="section level4">
+<h4><span class="header-section-number">15.2.6.1</span> Calculating z-scores</h4>
+</div>
+</div>
+<div id="generalization-exercise-3" class="section level3">
+<h3><span class="header-section-number">15.2.7</span> Generalization Exercise</h3>
+</div>
+<div id="writing-assignment-3" class="section level3">
+<h3><span class="header-section-number">15.2.8</span> Writing assignment</h3>
+</div>
+</div>
+<div id="excel-4" class="section level2">
+<h2><span class="header-section-number">15.3</span> Excel</h2>
+</div>
+<div id="spss-4" class="section level2">
+<h2><span class="header-section-number">15.4</span> SPSS</h2>
+<div id="saving-data-as-standardized-values.-1" class="section level3">
+<h3><span class="header-section-number">15.4.1</span> Saving data as standardized values.</h3>
+</div>
+<div id="computing-variables-1" class="section level3">
+<h3><span class="header-section-number">15.4.2</span> Computing variables</h3>
+</div>
+<div id="practice-problems-13" class="section level3">
+<h3><span class="header-section-number">15.4.3</span> Practice Problems</h3>
+</div>
+</div>
+<div id="jamovi-16" class="section level2">
+<h2><span class="header-section-number">15.5</span> JAMOVI</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-3-correlation-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-5-fundamentals-of-hypothesis-testing-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/CrumpLab/statisticsLab/blob/master/04-NormalDist.Rmd",
+"text": "Edit"
+},
+"download": ["Statistics_Lab.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

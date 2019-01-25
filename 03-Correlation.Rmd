@@ -1,0 +1,71 @@
+# Lab 3: Correlation
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+If ... we choose a group of social phenomena with no antecedent knowledge of the causation or absence of causation among them, then the calculation of correlation coefficients, total or partial, will not advance us a step toward evaluating the importance of the causes at work.
+---Sir Ronald Fisher
+</span>
+
+In lecture and in the textbook, we have been discussing the idea of correlation. This is the idea that two things that we measure can be somehow related to one another. For example, your personal happiness, which we could try to measure say with a questionnaire, might be related to other things in your life that we could also measure, such as number of close friends, yearly salary, how much chocolate you have in your bedroom, or how many times you have said the word Nintendo in your life. Some of the relationships that we can measure are meaningful, and might reflect a causal relationship where one thing causes a change in another thing. Some of the relationships are spurious, and do not reflect a causal relationship.
+
+In this lab you will learn how to compute correlations between two variables in software, and then ask some questions about the correlations that you observe.
+
+## General Goals
+
+1. Compute Pearson's r between two variables using software
+2. Discuss the possible meaning of correlations that you observe
+
+### Important Info
+
+We use data from the [World Happiness Report](http://worldhappiness.report). A .csv of the data can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/WHR2018.csv" download>WHR2018.csv</a>
+
+## JAMOVI
+
+In this lab, we will use jamovi to calculate the correlation coefficient. We will focus on the most-commonly used Pearson's coefficient, r. We will learn how to:
+
+2. Produce a correlation matrix
+3. Produce a scatterplot
+
+Let's first begin with a short data set we will enter into a new jamovi data spreadsheet. Remember, in order to calculate a correlation, you need to have bivariate data; that is, you must have at least two variables, x and y. You can also have more than two variables, as indicated in the section that follows. 
+
+### Correlation Coefficient for Bivariate Data: Two Variables
+
+Let's use the following data set: {x= 1, 3, 2, 5, 4, 6, 5, 8, 9} {y= 6, 5, 8, 7, 9, 7, 8, 10, 13}. Notice there are two variables, `x` and `y`. Enter these into jamovi and name them appropriately. With your data file open, go up to the top menu and follow these steps:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BwfCAIix-JM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+On the right, jamovi will produce an output table containing the correlation matrix requested. Any variable correlated with itself will result in an r of 1. The Pearson r correlation between variables x and y is 0.765.
+
+In the event that you have more than two variables in your spreadsheet, and would like to evaluate correlations between several variables taken two at a time, you can enter multiple variables into the correlation window and obtain a correlation matrix--a table showing every possible bivariate correlation amongst a group of variables. To illustrate how this is done, let's add a new variable to our existing spreadsheet: variable `z`, {z= 1, 4, 2, 9, 5, 7, 12, 5, 3}. Follow these steps to obtain the correlation matrix:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ULTNeFUCqHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+According to this output:
+1. The correlation coefficient between variables `x` and `y` is .765
+2. The correlation coefficient between variables `x` and `z` is .294
+3. The correlation coefficient between variables `y` and `z` is -.080
+
+### Correlation and Scatterplots
+
+To accompany the calculation of the correlation coefficient, the scatterplot is the relevant visualization tool. Let's use data from The World Happiness Report [World Happiness Report](http://worldhappiness.report). A .csv of the data can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/WHR2018.csv" download>WHR2018.csv</a>
+
+Using this data, let's answer the following question: does a country's measure for `freedom to make life choices` correlate with that country's measure for `Confidence in national government`? Let's find the correlation coefficient between these variables first. With your data file open, go up to the top menu and follow these steps to get the correlation matrix and scatter plot. You can keep this scatterplot as it is, or, you can edit it to include a straight line that best fits the data points. This line is known as the best-fitting line as it minimizes the distance from it to all the data. To add the line, just check the option under 'Regression Line' for 'Linear'.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4tmu4b2q-Es" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Based on this output, the correlation between `Freedom to make life choices` and `Confidence in national government` is .408.
+
+This scatterplot is very important. The distance between the line and the data points is indicative of the strength of the correlation coefficient; they are directly related. For example, if the data were more clustered or tighter to the line, the correlation would be stronger. If the data points are more spread out and far from the line, the correlation is weaker. 
+
+### Practice Problems
+
+1. Find the correlation between “perceptions of corruption” and “positive affect”. Create a scatterplot to visualize this relationship. What are your conclusions about the relationship between affect and perceived corruption? Is this surprising to you?
+
+2. What has happened to log GDP (consider this a measure of GDP) in the United States ONLY with time (as the year has increased)? Explain this relationship and provide a scatterplot.
+
+3. Which country (or countries) have seen a more consistent and strong increase in log GDP over time? Which country (or countries) have seen a decrease over time?
+
+

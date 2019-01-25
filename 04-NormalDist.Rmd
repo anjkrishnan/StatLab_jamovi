@@ -1,0 +1,61 @@
+# Lab 4: Normal Distribution & Central Limit Theorem
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+By a small sample, we may judge of the whole piece.
+---Miguel de Cervantes from Don Quixote
+</span>
+
+## General Goals
+
+1. Distributions
+2. Sampling from distributions
+3. Sampling distribution of the mean
+4. Sampling statistics (statistics of many samples)
+5. Central limit theorem
+6. Normal Distribution
+7. z-scores
+
+## JAMOVI
+
+In this lab, we will use jamovi to transform a set of raw data into z-scores using two methods:
+
+1. Saving data as standardized values
+2. Computing a new variable manually
+
+### Saving data as standardized values.
+
+Let's first begin with a short data set we will enter into a new jamovi data spreadsheet. Let's use the following data set: {x= 1, 3, 2, 5, 4, 6, 5, 8, 9}. Enter these into jamovi and name them appropriately. With your jamovi screen open, go up to the top menu and follow these steps:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gUfsZ90MUeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+You can include descriptives such as mean and standard deviation for your variables, as outlined in a previous chapter. Go back to data view in your spreadsheet and you will notice a new column of data (a new variable) as been created called `Zx`. This variable contains the z-scores that correspond to the values in the `x` columm:
+
+### Computing variables
+
+If you use the method shown above to convert a set of measurements to z-scores, you don't need to use this method to do the same thing. However, computing new variables may be useful for more than just converting scores to z-scores, so it's worth illustrating as well. The take-away message here is that you can use jamovi to create new variables based on existing ones. 
+
+To illustrate how this is done, let's work with the data sheet we used in the previous example. Currently, it includes a column for our x variable, and the new `Zx` variable we created using the 'Transfor' option. This time, we are going to turn our x variable measurements into z-scores manually. In order to do this, we're going to need the necessary components to calculate z-scores: We will need the mean and standard deviation of the `x` variable. Remember, in the previous section a table of descriptive statistics was generated. We know that the mean of variable `x` is 4.78 and the standard deviation is 2.64. In order to turn every measurement in variable `x` into a z-score, then, we must subtract 4.78 from each `x`, then divide that difference by 2.635. We are going to ask jamovi to do this through the following steps:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zpMH6Gd6xKk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+You may  go back to your jamovi spreadsheet. It should now have a new variable listed, `new_z`, and the computed z-scores should look very similar to the previously calculated z-scores (any differences are due to using rounded figures). You can use this Compute Variable window to calculate z-scores or make any calculations using existing variables. 
+
+### Practice Problems
+
+“Professor, do you grade on a curve?”
+
+This is probably the most commonly-asked question in Statistics class. Everyone assumes that grading on a curve will benefit them. But does it?
+
+[Here](https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/StatsGrades.sav) is a link to an SPSS file containing 50 students’ exam grades (let’s say it’s the final exam for a Statistics class).
+
+1. Create a table containing the mean and standard deviation for this sample of scores. Now, produce a frequency histogram of the score data. Describe the distribution.
+
+2. Transform each student’s score into a Z-score (you can use either method shown in this tutorial). Now, plot the frequency histogram of this Z-score distribution. Compare it to the raw score distribution. How are they the same? How are they different?
+
+3. Imagine you are a student in this class who received a 90 on this exam. However, the Professor has decided to GRADE ON A CURVE (shock! awe!), such that only the top 10% of the class receives an A (this professor only gives whole grades, no minuses or pluses). Calculate the z-score that corresponds to a raw score of 90 on this exam. Will you get an A with this grade? Why or why not?
+
+

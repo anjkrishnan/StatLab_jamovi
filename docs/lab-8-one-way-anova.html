@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Answering questions with data: Lab Manual</title>
+  <meta name="description" content="A lab manual for Psyc 3400">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Answering questions with data: Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A lab manual for Psyc 3400" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Answering questions with data: Lab Manual" />
+  
+  <meta name="twitter:description" content="A lab manual for Psyc 3400" />
+  
+
+<meta name="author" content="Matthew J. C. Crump, Anjali Krishnan, Stephen Volz, and Alla Chavarga">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lab-7-t-test-independent-sample.html">
+<link rel="next" href="lab-9-repeated-measures-anova.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79429674-4');
+</script>
+
+
+<script type="text/javascript">
+mattcrump=1;
+</script>
+
+
+
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Lab Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#important-notes"><i class="fa fa-check"></i><b>0.1</b> Important notes</a><ul>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#attributions"><i class="fa fa-check"></i><b>0.1.1</b> Attributions</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#cc-by-sa-4.0-license"><i class="fa fa-check"></i><b>0.1.2</b> CC BY-SA 4.0 license</a></li>
+<li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#copying-the-lab-manual"><i class="fa fa-check"></i><b>0.1.3</b> Copying the lab manual</a></li>
+<li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1.4</b> Acknowledgments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i>Software</a><ul>
+<li class="chapter" data-level="0.2" data-path="software.html"><a href="software.html#data"><i class="fa fa-check"></i><b>0.2</b> Data</a><ul>
+<li class="chapter" data-level="0.2.1" data-path="software.html"><a href="software.html#data-repository"><i class="fa fa-check"></i><b>0.2.1</b> Data Repository</a></li>
+<li class="chapter" data-level="0.2.2" data-path="software.html"><a href="software.html#csv-format"><i class="fa fa-check"></i><b>0.2.2</b> CSV format</a></li>
+<li class="chapter" data-level="0.2.3" data-path="software.html"><a href="software.html#spss-format"><i class="fa fa-check"></i><b>0.2.3</b> SPSS format</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="software.html"><a href="software.html#jamovi"><i class="fa fa-check"></i><b>0.3</b> JAMOVI</a><ul>
+<li class="chapter" data-level="0.3.1" data-path="software.html"><a href="software.html#installing-jamovi"><i class="fa fa-check"></i><b>0.3.1</b> Installing jamovi</a></li>
+<li class="chapter" data-level="0.3.2" data-path="software.html"><a href="software.html#opening-jamovi"><i class="fa fa-check"></i><b>0.3.2</b> Opening jamovi</a></li>
+<li class="chapter" data-level="0.3.3" data-path="software.html"><a href="software.html#adding-modules"><i class="fa fa-check"></i><b>0.3.3</b> Adding modules</a></li>
+<li class="chapter" data-level="0.3.4" data-path="software.html"><a href="software.html#what-you-should-know-for-this-course"><i class="fa fa-check"></i><b>0.3.4</b> What you should know for this course</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Graphing Data</a><ul>
+<li class="chapter" data-level="1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#general-goals"><i class="fa fa-check"></i><b>1.1</b> General Goals</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#important-info"><i class="fa fa-check"></i><b>1.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#jamovi-1"><i class="fa fa-check"></i><b>1.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#loading-and-inspecting-data"><i class="fa fa-check"></i><b>1.2.1</b> Loading and inspecting data</a></li>
+<li class="chapter" data-level="1.2.2" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#practice"><i class="fa fa-check"></i><b>1.2.2</b> Practice</a></li>
+<li class="chapter" data-level="1.2.3" data-path="lab-1-graphing-data.html"><a href="lab-1-graphing-data.html#practice-1"><i class="fa fa-check"></i><b>1.2.3</b> Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Descriptive Statistics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#general-goals-1"><i class="fa fa-check"></i><b>2.1</b> General Goals</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#important-info-1"><i class="fa fa-check"></i><b>2.1.1</b> Important info</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#jamovi-2"><i class="fa fa-check"></i><b>2.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#descriptive-statistics"><i class="fa fa-check"></i><b>2.2.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#descriptive-statistics-and-histograms"><i class="fa fa-check"></i><b>2.2.2</b> Descriptive Statistics and Histograms</a></li>
+<li class="chapter" data-level="2.2.3" data-path="lab-2-descriptive-statistics.html"><a href="lab-2-descriptive-statistics.html#practice-problems"><i class="fa fa-check"></i><b>2.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Correlation</a><ul>
+<li class="chapter" data-level="3.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#general-goals-2"><i class="fa fa-check"></i><b>3.1</b> General Goals</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#important-info-2"><i class="fa fa-check"></i><b>3.1.1</b> Important Info</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#jamovi-3"><i class="fa fa-check"></i><b>3.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-coefficient-for-bivariate-data-two-variables"><i class="fa fa-check"></i><b>3.2.1</b> Correlation Coefficient for Bivariate Data: Two Variables</a></li>
+<li class="chapter" data-level="3.2.2" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#correlation-and-scatterplots"><i class="fa fa-check"></i><b>3.2.2</b> Correlation and Scatterplots</a></li>
+<li class="chapter" data-level="3.2.3" data-path="lab-3-correlation.html"><a href="lab-3-correlation.html#practice-problems-1"><i class="fa fa-check"></i><b>3.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Normal Distribution &amp; Central Limit Theorem</a><ul>
+<li class="chapter" data-level="4.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#general-goals-3"><i class="fa fa-check"></i><b>4.1</b> General Goals</a></li>
+<li class="chapter" data-level="4.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#jamovi-4"><i class="fa fa-check"></i><b>4.2</b> JAMOVI</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#saving-data-as-standardized-values."><i class="fa fa-check"></i><b>4.2.1</b> Saving data as standardized values.</a></li>
+<li class="chapter" data-level="4.2.2" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#computing-variables"><i class="fa fa-check"></i><b>4.2.2</b> Computing variables</a></li>
+<li class="chapter" data-level="4.2.3" data-path="lab-4-normal-distribution-central-limit-theorem.html"><a href="lab-4-normal-distribution-central-limit-theorem.html#practice-problems-2"><i class="fa fa-check"></i><b>4.2.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html"><i class="fa fa-check"></i><b>5</b> Lab 5: Fundamentals of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="5.1" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#jamovi-5"><i class="fa fa-check"></i><b>5.1</b> JAMOVI</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#experiment-background"><i class="fa fa-check"></i><b>5.1.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#calculate-difference-scores-between-pairs-of-measures-and-conduct-a-sign-test"><i class="fa fa-check"></i><b>5.1.2</b> Calculate difference scores between pairs of measures and conduct a sign test</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#entering-data-for-sign-test-problems"><i class="fa fa-check"></i><b>5.1.3</b> Entering data for sign test problems</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lab-5-fundamentals-of-hypothesis-testing.html"><a href="lab-5-fundamentals-of-hypothesis-testing.html#practice-problems-3"><i class="fa fa-check"></i><b>5.1.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html"><i class="fa fa-check"></i><b>6</b> Lab 6: t-Test (one-sample, paired sample)</a><ul>
+<li class="chapter" data-level="6.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#does-music-convey-social-information-to-infants"><i class="fa fa-check"></i><b>6.1</b> Does Music Convey Social Information to Infants?</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#study-description"><i class="fa fa-check"></i><b>6.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#lab-skills-learned"><i class="fa fa-check"></i><b>6.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="6.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#important-stuff"><i class="fa fa-check"></i><b>6.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="6.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#jamovi-6"><i class="fa fa-check"></i><b>6.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#baseline-phase-conduct-a-one-sample-t-test"><i class="fa fa-check"></i><b>6.4.1</b> Baseline phase: Conduct a one sample t-test</a></li>
+<li class="chapter" data-level="6.4.2" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#test-phase"><i class="fa fa-check"></i><b>6.4.2</b> Test phase</a></li>
+<li class="chapter" data-level="6.4.3" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#paired-samples-t-test"><i class="fa fa-check"></i><b>6.4.3</b> Paired-samples t-test</a></li>
+<li class="chapter" data-level="6.4.4" data-path="lab-6-t-test-one-sample-paired-sample.html"><a href="lab-6-t-test-one-sample-paired-sample.html#practice-problems-4"><i class="fa fa-check"></i><b>6.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html"><i class="fa fa-check"></i><b>7</b> Lab 7: t-test (Independent Sample)</a><ul>
+<li class="chapter" data-level="7.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#do-you-come-across-as-smarter-when-people-read-what-you-say-or-hear-what-you-say"><i class="fa fa-check"></i><b>7.1</b> Do you come across as smarter when people read what you say or hear what you say?</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#study-description-1"><i class="fa fa-check"></i><b>7.1.1</b> STUDY DESCRIPTION</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#lab-skills-learned-1"><i class="fa fa-check"></i><b>7.2</b> Lab skills learned</a></li>
+<li class="chapter" data-level="7.3" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#important-stuff-1"><i class="fa fa-check"></i><b>7.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="7.4" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#jamovi-7"><i class="fa fa-check"></i><b>7.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#experiment-background-1"><i class="fa fa-check"></i><b>7.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#performing-an-independent-samples-t-test"><i class="fa fa-check"></i><b>7.4.2</b> Performing an independent-samples t-test</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lab-7-t-test-independent-sample.html"><a href="lab-7-t-test-independent-sample.html#practice-problems-5"><i class="fa fa-check"></i><b>7.4.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html"><i class="fa fa-check"></i><b>8</b> Lab 8 One-way ANOVA</a><ul>
+<li class="chapter" data-level="8.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#how-to-not-think-about-bad-memories-by-playing-tetris"><i class="fa fa-check"></i><b>8.1</b> How to not think about bad memories by playing Tetris</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#study-description-2"><i class="fa fa-check"></i><b>8.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="8.1.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#study-methods"><i class="fa fa-check"></i><b>8.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#lab-skills-learned-2"><i class="fa fa-check"></i><b>8.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="8.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#important-stuff-2"><i class="fa fa-check"></i><b>8.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="8.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#jamovi-8"><i class="fa fa-check"></i><b>8.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#experiment-background-2"><i class="fa fa-check"></i><b>8.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="8.4.2" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#performing-a-one-factor-analysis-of-variance-anova-graphing-the-data"><i class="fa fa-check"></i><b>8.4.2</b> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</a></li>
+<li class="chapter" data-level="8.4.3" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#unplanned-comparisons-post-hoc-tests"><i class="fa fa-check"></i><b>8.4.3</b> Unplanned Comparisons: Post-hoc tests</a></li>
+<li class="chapter" data-level="8.4.4" data-path="lab-8-one-way-anova.html"><a href="lab-8-one-way-anova.html#practice-problems-6"><i class="fa fa-check"></i><b>8.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html"><i class="fa fa-check"></i><b>9</b> Lab 9 Repeated Measures ANOVA</a><ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#betcha-cant-type-jhdbzkco-very-fast-on-your-first-try"><i class="fa fa-check"></i><b>9.1</b> Betcha can’t type JHDBZKCO very fast on your first try</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-description-3"><i class="fa fa-check"></i><b>9.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="9.1.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#study-methods-1"><i class="fa fa-check"></i><b>9.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#lab-skills-learned-3"><i class="fa fa-check"></i><b>9.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="9.3" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#important-stuff-3"><i class="fa fa-check"></i><b>9.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="9.4" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#jamovi-9"><i class="fa fa-check"></i><b>9.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#experiment-background-3"><i class="fa fa-check"></i><b>9.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="9.4.2" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#conduct-a-one-factor-repeated-measures-anova"><i class="fa fa-check"></i><b>9.4.2</b> Conduct a One-Factor Repeated Measures ANOVA</a></li>
+<li class="chapter" data-level="9.4.3" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#post-hoc-tests"><i class="fa fa-check"></i><b>9.4.3</b> Post-hoc tests</a></li>
+<li class="chapter" data-level="9.4.4" data-path="lab-9-repeated-measures-anova.html"><a href="lab-9-repeated-measures-anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html"><i class="fa fa-check"></i><b>10</b> Lab 10: Factorial ANOVA</a><ul>
+<li class="chapter" data-level="10.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#does-standing-up-make-you-focus-more"><i class="fa fa-check"></i><b>10.1</b> Does standing up make you focus more?</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#study-description-4"><i class="fa fa-check"></i><b>10.1.1</b> STUDY DESCRIPTION</a></li>
+<li class="chapter" data-level="10.1.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#study-methods-2"><i class="fa fa-check"></i><b>10.1.2</b> Study Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#lab-skills-learned-4"><i class="fa fa-check"></i><b>10.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="10.3" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#important-stuff-4"><i class="fa fa-check"></i><b>10.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="10.4" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#jamovi-10"><i class="fa fa-check"></i><b>10.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#experiment-background-4"><i class="fa fa-check"></i><b>10.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="10.4.2" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#conduct-a-between-subjects-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.4.2</b> Conduct a Between-Subjects Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.4.3" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#conduct-a-repeated-measures-two-factor-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.4.3</b> Conduct a Repeated Measures Two-Factor Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.4.4" data-path="lab-10-factorial-anova.html"><a href="lab-10-factorial-anova.html#practice-problems-8"><i class="fa fa-check"></i><b>10.4.4</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html"><i class="fa fa-check"></i><b>11</b> Lab 11: Mixed Factorial ANOVA</a><ul>
+<li class="chapter" data-level="11.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#do-you-remember-things-better-when-you-take-pictures-of-them"><i class="fa fa-check"></i><b>11.1</b> Do you remember things better when you take pictures of them?</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#study-description-5"><i class="fa fa-check"></i><b>11.1.1</b> Study description</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#lab-skills-learned-5"><i class="fa fa-check"></i><b>11.2</b> Lab Skills Learned</a></li>
+<li class="chapter" data-level="11.3" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#important-stuff-5"><i class="fa fa-check"></i><b>11.3</b> Important Stuff</a></li>
+<li class="chapter" data-level="11.4" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#jamovi-11"><i class="fa fa-check"></i><b>11.4</b> JAMOVI</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#experiment-background-5"><i class="fa fa-check"></i><b>11.4.1</b> Experiment Background</a></li>
+<li class="chapter" data-level="11.4.2" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#conduct-a-mixed-factorial-analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.4.2</b> Conduct a Mixed-Factorial Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="11.4.3" data-path="lab-11-mixed-factorial-anova.html"><a href="lab-11-mixed-factorial-anova.html#practice-problems-9"><i class="fa fa-check"></i><b>11.4.3</b> Practice Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Answering questions with data: Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<img src="LabmanualCover.png" id="coverpic" width="350" style="display: block; margin: auto;" />
+<div id="lab-8-one-way-anova" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Lab 8 One-way ANOVA</h1>
+<script>
+$("#coverpic").hide();
+</script>
+<p><span class="newthought"> The analysis of variance is not a mathematical theorem, but rather a convenient method of arranging the arithmetic. —R. A. Fisher </span></p>
+<div class="marginnote">
+<p>This lab is modified and extended from <a href="https://sites.trinity.edu/osl">Open Stats Labs</a>. Thanks to Open Stats Labs (Dr. Kevin P. McIntyre) for their fantastic work.</p>
+</div>
+<div id="how-to-not-think-about-bad-memories-by-playing-tetris" class="section level2">
+<h2><span class="header-section-number">8.1</span> How to not think about bad memories by playing Tetris</h2>
+<p>This lab activity uses the open data from Experiment 2 of James et al. (2015) to teach one-way ANOVA with planned comparisons. Results of the activity provided below should exactly reproduce the results described in the paper.</p>
+<div id="study-description-2" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> STUDY DESCRIPTION</h3>
+<p>Following traumatic experiences, some people have flashbacks, which are also called “intrusive memories”&quot; and are characterized by involuntary images of aspects of the traumatic event. Although people often try to simply forget traumatic memories, this approach is not very effective. Instead, previous research suggests that a better approach may be to try to change aspects of the memory after it is formed. For example, some research shows that traumatic memories can be altered and weakened to the point that they are no longer intrusive.</p>
+<p>Because intrusive memories of trauma are often visual in nature, James and colleagues (2015) sought to explore whether completing a visuospatial task (e.g., Tetris) after a memory was formed would interfere with the storage of that memory, and thereby reduce the frequency of subsequent intrusions. They hypothesized that only participants who complete a visuo-spatial task after reactivation of the traumatic memories would experience a reduction in intrusive memories. In comparison, simply completing a visuo-spatial task (without reactivation) or reactivation (without a visuo-spatial task), would not reduce the occurrence intrusive memories.</p>
+<p>In other words, if you play Tetris shortly after you were remembering bad memories, playing Tetris might weaken those memories, which could cause you experience those kinds of intrusive memories less often in the future.</p>
+</div>
+<div id="study-methods" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> Study Methods</h3>
+<p>To test their hypothesis, the authors conducted an experiment ( N = 72, n = 18 per condition). The procedure is summarized as follows:</p>
+<p><strong>Trauma Film</strong>: All participants viewed a series of video clips of graphic violence (e.g., a person getting hit by a van while using his phone as he crosses the road) as a way to create memories that should become intrusive memories. Participants then went home and recorded the number of intrusive memories they experienced over the next 24 hours. Because this is before the experimental manipulations, all groups were predicted to have an equal occurrence of intrusive memories during the first 24-hours (called Day 0).</p>
+<p><strong>Experimental Task</strong>: After this 24-hour period, the participants returned to the lab and completed the experimental task. The experimenters randomly assigned participants to ONE of the following conditions:</p>
+<ol style="list-style-type: decimal">
+<li>No-task control: These participants completed a 10-minute music filler task.</li>
+<li>Reactivation + Tetris: These participants were shown a series of images from the trauma film to reactivate the traumatic memories (i.e., reactivation task). After a 10-minute music filler task, participants played the video game Tetris for 12 minutes.</li>
+<li>Tetris Only: These participants played Tetris for 12 minutes, but did not complete the reactivation task.</li>
+<li>Reactivation Only: These participants completed the reactivation task, but did not play Tetris.</li>
+</ol>
+<p><strong>Intrusive Memories</strong>: All participants were asked to record the number of intrusive memories that they experienced over the next seven days (Days 1 to 7).</p>
+<p>After the seven days had passed, participants completed an Intrusion-Provocation Task, in which they were shown blurred images from the trauma film and asked to indicate whether the blurred image triggered an intrusive memory.</p>
+</div>
+</div>
+<div id="lab-skills-learned-2" class="section level2">
+<h2><span class="header-section-number">8.2</span> Lab Skills Learned</h2>
+</div>
+<div id="important-stuff-2" class="section level2">
+<h2><span class="header-section-number">8.3</span> Important Stuff</h2>
+<ul>
+<li>citation: James, E. L., Bonsall, M. B., Hoppitt, L., Tunbridge, E. M., Geddes, J. R., Milton, A. L., &amp; Holmes, E. A. (2015). Computer game play reduces intrusive memories of experimental trauma via re-consolidation-update mechanisms. Psychological Science, 26, 1201-1215.</li>
+<li><a href="http://journals.sagepub.com/stoken/default+domain/hQ2W4fbPrZVJ7eyNJaqu/full">Link to .pdf of article</a></li>
+<li><a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/Jamesetal2015Experiment2.csv" download>Data in .csv format</a></li>
+<li><a href="https://drive.google.com/file/d/0Bz-rhZ21ShvOZ1lvQ0dQekZGWU0/view?usp=sharing">Data in SPSS format</a></li>
+</ul>
+</div>
+<div id="jamovi-8" class="section level2">
+<h2><span class="header-section-number">8.4</span> JAMOVI</h2>
+<p>In this lab, we will use jamovi to:</p>
+<ol style="list-style-type: decimal">
+<li>Perform a one-Factor Analysis of Variance (ANOVA)</li>
+<li>Use a post-hoc test to locate differences</li>
+</ol>
+<div id="experiment-background-2" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> Experiment Background</h3>
+<p>As described at the beginning of this lab manual section, researchers in the James et al. (2015) study sought to explore whether completing a visuospatial task (e.g., Tetris) after a memory was formed would interfere with the storage of that memory, and thereby reduce the frequency of subsequent intrusions. They hypothesized that only participants who complete a visuo-spatial task after reactivation of the traumatic memories would experience a reduction in intrusive memories. In comparison, simply completing a visuo-spatial task (without reactivation) or reactivation (without a visuo-spatial task), would not reduce the occurrence intrusive memories.In other words, if you play Tetris shortly after you were remembering bad memories, you will experience intrusive memories less often in the future.</p>
+<p>The authors conducted an experiment ( N = 72, n = 18 per condition) wherein all participants viewed a series of video clips of graphic violence (e.g., a person getting hit by a van while using his phone as he crosses the road). Pver the next 24 hours, participants recorded their intrusive memories. All groups were predicted to have an equal occurrence of intrusive memories during this pre-manipulation period (called Day 0).</p>
+<p>Experimental Task: After this 24-hour period, the participants returned to the lab and completed the experimental task. The experimenters randomly assigned participants to ONE of the following conditions:</p>
+<ol style="list-style-type: decimal">
+<li>No-task control: These participants completed a 10-minute music filler task.</li>
+<li>Reactivation + Tetris: These participants were shown a series of images from the trauma film to reactivate the traumatic memories (i.e., reactivation task). After a 10-minute music filler task, participants played the video game Tetris for 12 minutes.</li>
+<li>Tetris Only: These participants played Tetris for 12 minutes, but did not complete the reactivation task.</li>
+<li>Reactivation Only: These participants completed the reactivation task, but did not play Tetris.</li>
+</ol>
+<p>Dependent variable: Intrusive Memories: All participants were asked to record the number of intrusive memories that they experienced over the next seven days (Days 1 to 7).</p>
+</div>
+<div id="performing-a-one-factor-analysis-of-variance-anova-graphing-the-data" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> Performing a One-Factor Analysis of Variance (ANOVA) &amp; Graphing the data</h3>
+<p>First, let’s open the relevant data file; <a href="https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/James2015_Experiment2.sav">Here</a> is the link. It’s called “James2015_Experiment2.sav” In this experiment, there was one important independent variable, called <code>condition</code>, and it has four levels. The levels are 1, 2, 3, and 4 in the spreadsheet. These will correspond to the four levels in shown below:</p>
+<ol style="list-style-type: decimal">
+<li>No-task control</li>
+<li>Reactivation Plus Tetris</li>
+<li>Tetris only</li>
+<li>Reactivation only</li>
+</ol>
+<p>The dependent variable is coded in the column <code>Days_One_to_Seven_Number_of_Intrusions</code>. This represents the mean number of intrusions for that week. We are testing the hypothesis that the number of intrusive memories will be different among the groups (1-4). For now, we will not specify which group we think is going to have the highest or lowest number of memories, but rather we will test if there is a difference SOMEWHERE between these 4 groups.</p>
+</div>
+<div id="unplanned-comparisons-post-hoc-tests" class="section level3">
+<h3><span class="header-section-number">8.4.3</span> Unplanned Comparisons: Post-hoc tests</h3>
+<p>One way to find the differences between groups in a One-Factor ANOVA is to conduct something called a post-hoc test. This test is referred to as “unplanned” because you only conduct one when you have a significant overall ANOVA. The post-hoc test is neat because it is conveniently summoned during the process of conducting an ANOVA, and presents its results in a compact table. Let’s use a post-hoc test to look at this data. Although there are many types of post-hoc tests, we’re going to conduct the commonly-used Tukey post-hoc test in this example.</p>
+<p>To conduct the ANOVA and post-hoc tests in jamovi, follow these steps, and you will see the rght side of the screen update with the chosen analyses and statistics:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cO4eP-6628U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>If you start with row 1, this row compares no-task control with reactivation + tetris. If we find the Sig. column, we see the corresponding p-value for this row is .017. Because this is less than our likely alpha level (.05), this means that these two conditions ARE significantly different from one another. Where else is there a Sig. that is less than alpha (.05)?</p>
+<p>Reactivation + Tetris compared with Reactivation only has a p-value of .034. This is also a significant difference. These are the only significant differences we see here. This means that, among the 4 groups, only two differences were found: Reactivation + tetris is different from no-task control, and reactivation + tetris is different from reactivation only.</p>
+</div>
+<div id="practice-problems-6" class="section level3">
+<h3><span class="header-section-number">8.4.4</span> Practice Problems</h3>
+<p>Using this lab’s data set, think about the following question: What if participants’ intrusive memories were not actually affected by the manipulation (tetris and reactivation), but rather the group with the most intrusive memories just happened to react more strongly to the disturbing films? What if there were differences in “level of disturbance” (hint hint: post-film distress rating) among the 4 groups?</p>
+<ol style="list-style-type: decimal">
+<li><p>Test this hypothesis using an alpha level of .05. Report your result in proper statistical reporting format. What do you conclude?</p></li>
+<li><p>Do the same type of analysis to determine whether the amount of attention paid to the film differed between the 4 groups. Report your result in proper statistical reporting format. What do you conclude?</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-7-t-test-independent-sample.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-9-repeated-measures-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/CrumpLab/statisticsLab/blob/master/08-ANOVA.Rmd",
+"text": "Edit"
+},
+"download": ["Statistics_Lab.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

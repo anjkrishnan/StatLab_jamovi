@@ -1,0 +1,69 @@
+# Lab 11: Mixed Factorial ANOVA
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+No amount of experimentation can ever prove me right; a single experiment can prove me wrong
+---Albert Einstein
+</span>
+
+## Do you remember things better when you take pictures of them?
+
+People take pictures of things all the time on their phones. Barasch et al. (2017) asked whether taking pictures of things had consequences for later memory of those experiences.
+
+### Study description
+
+In Experiment 1, participants visited a museum exhibit. Half of the participants were allowed to take photographs (with camera, at least 10 pictures) and the other half were not (no camera). They freely looked at anything in the exhibit, and were allowed to take pictures of anything they wanted (if they were in the camera condition). Additionally, while visiting the exhibit, participants listened to audio guides about the things the were looking at. 
+
+After participants were done with the exhibit the returned to the sign-in desk. At this point they were given two memory tests for the things they saw and heard in the exhibit. They were given a visual recognition test containing pictures of objects, and were asked to identify which objects they remembered seeing. They were also given an auditory recognition test containing statements that could have been on the audio guide, and they had to identify which ones they had heard before.
+
+This is a 2x2 mixed design. IV 1 was a between-subjects manipulation involving picture-taking (camera vs. no camera). IV2 was a within-subject manipulation of memory test (visual vs. audio). The dependent measure was performance on the memory test.
+
+An overarching question was whether or not participants would have better visual memory for exhibit objects when they took pictures, compared to when they didn't. Additionally, taking pictures or not, may have no influence on memory for the statements in the audio guide.
+
+## Lab Skills Learned
+
+- Conducting a 2x2 mixed design ANOVA
+
+## Important Stuff
+
+- citation: Barasch, A., Diehl, K., Silverman, J., & Zauberman, G. (2017). Photographic memory: The effects of volitional photo taking on memory for visual and auditory aspects of an experience. Psychological science, 28(8), 1056-1066.
+- [Link to .pdf of article](http://journals.sagepub.com/doi/abs/10.1177/0956797617694868)
+- <a href="https://github.com/CrumpLab/statisticsLab/raw/master/study1_data_photo.csv" download>Data in .csv format</a>
+
+## JAMOVI
+
+In this lab, we will use jamovi to conduct and graph a Mixed-Factorial Analysis of Variance (ANOVA)
+
+### Experiment Background
+
+People take pictures of things all the time on their phones. Barasch et al. (2017) asked whether taking pictures of things had consequences for later memory of those experiences.
+
+In this experiment participants visited a museum exhibit. Half the participants were able to use a camera to document their visit, while the other half were not, all while listening to an audio tour of the exhibit. At the end of the visit, everyone was given two memory tests (visual and audio) for the content they saw and heard, respectively.
+
+This is a 2x2 Mixed-Factorial design. The individuals in the photo group are different than the individuals in the no photo group (this is our between-subjects variable--it is called `condition`), while the memory `test_type` (audio and visual) is our within-subjects variable since everyone took both types of tests. 
+
+### Conduct a Mixed-Factorial Analysis of Variance (ANOVA)
+
+Open the data file linked [here](https://github.com/CrumpLab/statisticsLab/blob/master/data/spssdata/study1_data_photo.sav). It is called "study1_data_photo.sav". Scroll through the file. Find the variable named `condition`. This variable tells you if the row in question corresponds to a person who was or was not able to use a camera. Now, find the variables `apercent` and `vpercent`. These variables refer to the percentage score received by everyone on the audio and visual memory tests, respectively. 
+
+Notice that every row in the data file only has ONE "condition" label. That is, you were either in the camera or no camera condition. BUT, everyone in the file has scores for BOTH tests, audio and visual. This is the way your data must be structed in jamovi in order to perform a mixed-factorial ANOVA. To conduct a mixed-design ANOVA with post-hoc tests in jamovi, follow these steps, and you will see the rght side of the screen update with the chosen analyses and statistics:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KhnIxk1qWQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Let's look at our output tables. Based on its values, we can tell that:
+
+1. There is a significant main effect of test type, F(1, 295)=108.59, p<.05. Overall, memory test scores were higher for the audio test than the video test.
+
+2. There is a significant ineraction effect between test type and condition, F(1, 295)=13.79, p<.05. People taking photos did worse on the audio test than people without photos, however, on the visual test, people taking photos did better than those who did not take photos.
+
+3. There is no significant main effect of condition, F(1, 295)=2.26, p=NS.
+
+### Practice Problems
+
+1. Using the same data file we used for this lab’s tutorial, run a Mixed-Factorial ANOVA using test type (audio and visual) and Gender (Male, Female). Use an alpha level of .05. Report your results in standard statistical reporting format. 
+
+
+

@@ -1,0 +1,72 @@
+# Lab 1: Graphing Data
+
+<script>
+$("#coverpic").hide();
+</script>
+
+<span class="newthought">
+The commonality between science and art is in trying to see profoundly - to develop strategies of seeing and showing.
+---Edward Tufte
+</span>
+
+As we have found out from the textbook and lecture, when we measure things, we get lots of numbers. Too many. Sometimes so many your head explodes just thinking about them. One of **the most helpful things** you can do to begin to make sense of these numbers, is to look at them in graphical form. Unfortunately, for sight-impaired individuals, graphical summary of data is much more well-developed than other forms of summarizing data for our human senses. Some researchers are developing auditory versions of visual graphs, a process called **sonification**, but we aren't prepared to demonstrate that here. Instead, we will make charts, and plots, and things to look at, rather than the numbers themselves, mainly because these are tools that are easiest to get our hands on, they are the most developed, and they work really well for visual summary. If time permits, at some point I would like to come back here and do the same things with sonification. I think that would be really, really cool!
+
+## General Goals
+
+Our general goals for this first lab are to get your feet wet, so to speak. We'll do these things:
+
+1. Load in some data to a statistical software program
+2. Talk a little bit about how the data is structured
+3. Make graphs of the data so we can look at it and make sense of it.
+
+### Important info
+
+1. Data for NYC film permits was obtained from the NYC open data website. The .csv file can be found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/Film_Permits.csv" download>Film_Permits.csv</a>
+
+2. Gapminder data from the gapminder project (copied from the R gapminder library) can be downloaded in .csv format here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/gapminder.csv" download>gapminder.csv</a>
+
+## JAMOVI
+In this lab, we will get you acquainted with the jamovi software layout and graph some sample data. We will be doing the following:
+
+1. Open jamovi and understand the jamovi layout 
+2. Load a data file and inspect the data
+3. Produce different types of graphs based on data type
+
+Your lab instructor will take you through the process of opening the jamovi program. You may double-click on its icon located on the desktop of your lab computer, or you may find it using the Start menu.
+
+### Loading and inspecting data
+You will be downloading and analyzing all kinds of data files this semester. We will follow the very same steps every time. You wil do the following for every data file:
+
+1) Download the data from the given link. 
+2) Open the downloaded file in jamovi
+3) Save a working copy of the file to pratice (so you don't alter the original data)
+
+When you open the data file in jamovi, you will see many rows and columns of data. Each row (except row 1) contains data corresponding to one observation. Row 1 however, contains the names of each variable, which we call the "Header" row. Each column contains data for a single variable, for every observation. Using your mouse to scroll through the data a bit and take a look. A good practice in data analysis is to create copies of your data, in order to rearrange and simplify your data for a specific problem, while maintaining a copy of the original data.
+
+#### Bar Graphs
+
+Let's use jamovi to look at something interesting. For example, what movies are going to be filming in NYC? It turns out that NYC makes a lot of data about a lot things open and free for anyone to download and look at. This is the NYC Open Data website: [https://opendata.cityofnewyork.us](https://opendata.cityofnewyork.us).
+
+We are going to look at data for NYC film permits, and you can download the .csv file found here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/Film_Permits.csv" download>Film_Permits.csv</a>
+
+We will not be working with every single variable in this dataset, but we'll select a few interesting ones with which to answer questions. Let's start with `borough`. Suppose we wanted to know which borough receives the most film permits (you can probably guess which one is most popular). Let's think about the nature of our question: we would like to know how many permits were filed for each borough. Borough is simply a label or a name for a region, and we want to know the frequency of permits for each borough. This is a nominal scale variable and so, we will appropriately choose a BAR graph to plot it. Let's use jamovi to produce a bar graph to answer this question. With your data file open, go up to the top menu and follow these steps:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CNh2c87I5E0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Practice
+Now, it is your turn. Create a bar plot showing the frequencies for each event type. What can you interpret about the permits based on this plot?
+
+#### Histograms
+
+Now, let's use a different data set to plot a histogram. The defining difference between a histogram and a bar graph (although they look very similar as they both utilize bars) is that a histogram is used to display a continuous variable (interval or ratio scale). In the previous example, boroughs were simply labels or names, so we used a nominal scale and therefore a bar graph. 
+
+In this example, we use data from the Gapminder project [https://www.gapminder.org](https://www.gapminder.org), which is an organization that collects some really interesting worldwide data. Gapminder data specific to this lab can be downloaded in .csv format here: <a href="https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/gapminder.csv" download>gapminder.csv</a>
+
+Here, we will deal with life expectancy (measured in years), an interval scale measure. Open this file and examine its rows and columns. Each column represents a year during which life expectancy was measured. Each row represents a different country. 
+
+Let's first get an idea about life expectancy in general. We want to plot a histogram with life expectancy on the x-axis and frequency on the y-axis. With your data file open, go up to the top menu and follow these steps:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DzeFqMqPxRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Practice
+Now, it is your turn. Create a histogram showing the frequencies for life expectancy, split by continent (Hint: You need to input the variable 'continent' into the box 'Split by'. What can you interpret about the life epectancy based on this plot?
